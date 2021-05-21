@@ -18,7 +18,7 @@ namespace GUI
         {
             InitializeComponent();
         }
-        dbQLShopDataContext db = new dbQLShopDataContext();
+        QLSHOPDataContext db = new QLSHOPDataContext();
         KhachHang_BLLDAL khachHang_BLLDAL = new KhachHang_BLLDAL();
         private void FormTaoThanhVienKH_Load(object sender, EventArgs e)
         {

@@ -8,7 +8,7 @@ namespace BLL_DAL
 {
     public class SanPham_BLLDAL
     {
-        dbQLShopDataContext dbContext = new dbQLShopDataContext();
+        QLSHOPDataContext dbContext = new QLSHOPDataContext();
        
         public IQueryable<SANPHAM> loadSanPham_ForLoai(int maLoai)
         {
@@ -16,11 +16,10 @@ namespace BLL_DAL
         }
         //public List<SANPHAM> loadSPTheoLoai(int maLoai)
         //{
-        //    var list= dbContext.SANPHAMs.Where(t => t.MALOAISANPHAM == maLoai).Select(t => new
+        //    var list = dbContext.SANPHAMs.Where(t => t.MALOAISANPHAM == maLoai).Select(t => new
         //    {
         //        t.MASANPHAM,
         //        t.TENSANPHAM,
-        //        t.SOLUONGTON,
         //        t.DONGIA,
         //        t.TRANGTHAI,
         //        t.MOTA
@@ -33,19 +32,19 @@ namespace BLL_DAL
         }
         public List<SANPHAM> loadSP()
         {
-            return dbContext.SANPHAMs.Where(t=>t.SOLUONGTON>0).ToList();
+            return dbContext.SANPHAMs.ToList();
         }
-        public string kiemTraSLTon(Cart cart, int maSP)
-        {
-            SANPHAM sp = dbContext.SANPHAMs.Where(t => t.MASANPHAM == maSP).FirstOrDefault();
-            CartItem cartItem = cart.dsSP.Where(t => t.iMaSanPham == maSP).FirstOrDefault();
+        //public string kiemTraSLTon(Cart cart, int maSP)
+        //{
+        //    SANPHAM sp = dbContext.SANPHAMs.Where(t => t.MASANPHAM == maSP).FirstOrDefault();
+        //    CartItem cartItem = cart.dsSP.Where(t => t.iMaSanPham == maSP).FirstOrDefault();
             
-            if (sp.SOLUONGTON <= 0) return "ĐÃ HẾT HÀNG";
-            if (cartItem == null) return "duyệt";
-            if (sp.SOLUONGTON == cartItem.iSoLuong )
-                return "Số lượng tồn không cung cấp đủ";
-            return "duyệt";
-        }
+        //    if (sp.SOLUONGTON <= 0) return "ĐÃ HẾT HÀNG";
+        //    if (cartItem == null) return "duyệt";
+        //    if (sp.SOLUONGTON == cartItem.iSoLuong )
+        //        return "Số lượng tồn không cung cấp đủ";
+        //    return "duyệt";
+        //}
         public IQueryable<SANPHAM> load_DSSP()
         {
             return dbContext.SANPHAMs.Select(t => t);

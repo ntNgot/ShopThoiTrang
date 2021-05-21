@@ -173,7 +173,6 @@ namespace BLL_DAL
             // 
             // bindingSource1
             // 
-            this.bindingSource1.DataSource = typeof(BLL_DAL.dbQLShopDataContext);
             // 
             // DetailReport
             // 

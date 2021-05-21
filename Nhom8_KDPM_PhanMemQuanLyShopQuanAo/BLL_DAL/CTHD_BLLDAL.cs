@@ -8,7 +8,7 @@ namespace BLL_DAL
 {
     public class CTHD_BLLDAL
     {
-        dbQLShopDataContext db = new dbQLShopDataContext();
+        QLSHOPDataContext db = new QLSHOPDataContext();
         //public List<vw_report> getData_MaHoaDon(int maHoaDon)
         //{
         //    return db.vw_reports.Where(ct => ct.MAHOADON == maHoaDon).ToList();

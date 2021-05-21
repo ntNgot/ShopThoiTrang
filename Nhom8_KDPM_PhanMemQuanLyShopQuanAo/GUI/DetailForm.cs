@@ -25,7 +25,7 @@ namespace GUI
             lbTenSp.Text += sanpham.TENSANPHAM;
             lbTrangThai.Text += sanpham.TRANGTHAI == true ? "Còn Hàng" : "Hết Hàng";
             lbDonGia.Text += sanpham.DONGIA+" VND";
-            lbSoLuongTon.Text += sanpham.SOLUONGTON+" Hàng";
+            
             lbMoTa.Text += sanpham.MOTA;
         }
 

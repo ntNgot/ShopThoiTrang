@@ -5483,7 +5483,7 @@ SELECT MAKHACHHANG, TENKHACHHANG, DIACHI, GIOITINH, NGAYSINH, SDT, EMAIL, HINHAN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::GUI.Properties.Settings.Default.QLSHOPConnectionString1;
+            this._connection.ConnectionString = global::GUI.Properties.Settings.Default.QLSHOPConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

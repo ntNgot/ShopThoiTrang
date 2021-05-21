@@ -31,13 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.cbLoaiSP = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnThemGH = new System.Windows.Forms.Button();
             this.txtMoTa = new System.Windows.Forms.RichTextBox();
@@ -63,11 +56,27 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.lbsubTB = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.gridSanPham = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.MaSP = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TenSP = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DonGia = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.KhuyenMai = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TrangThai = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.HinhAnh = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemImageEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageEdit();
+            this.MoTa = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PnBtnMau = new System.Windows.Forms.Panel();
+            this.PnColor = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLSHOPDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSanPham)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -88,66 +97,10 @@
             this.cbLoaiSP.TabIndex = 1;
             this.cbLoaiSP.SelectedIndexChanged += new System.EventHandler(this.cbLoaiSP_SelectedIndexChanged);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 328);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(765, 317);
-            this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "MASANPHAM";
-            this.Column1.HeaderText = "Mã Sản Phẩm";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 50;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "TENSANPHAM";
-            this.Column2.HeaderText = "Tên Sản Phẩm";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 150;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "SOLUONGTON";
-            this.Column3.HeaderText = "Số Lượng Tồn";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "DONGIA";
-            this.Column4.HeaderText = "Đơn Giá";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "TRANGTHAI";
-            this.Column5.HeaderText = "Trạng Thái";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "MOTA";
-            this.Column6.HeaderText = "Mô Tả";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 220;
-            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnThemGH);
+            this.groupBox1.Controls.Add(this.PnColor);
+            this.groupBox1.Controls.Add(this.PnBtnMau);
             this.groupBox1.Controls.Add(this.txtMoTa);
             this.groupBox1.Controls.Add(this.txtMaSP);
             this.groupBox1.Controls.Add(this.txtTrangThai);
@@ -168,12 +121,13 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sản Phẩm";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btnThemGH
             // 
-            this.btnThemGH.Location = new System.Drawing.Point(340, 19);
+            this.btnThemGH.Location = new System.Drawing.Point(616, 1);
             this.btnThemGH.Name = "btnThemGH";
-            this.btnThemGH.Size = new System.Drawing.Size(86, 61);
+            this.btnThemGH.Size = new System.Drawing.Size(59, 39);
             this.btnThemGH.TabIndex = 4;
             this.btnThemGH.Text = "Thêm vào Giỏ Hàng";
             this.btnThemGH.UseVisualStyleBackColor = true;
@@ -205,7 +159,7 @@
             // 
             // txtDonGia
             // 
-            this.txtDonGia.Location = new System.Drawing.Point(340, 96);
+            this.txtDonGia.Location = new System.Drawing.Point(342, 24);
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.ReadOnly = true;
             this.txtDonGia.Size = new System.Drawing.Size(97, 20);
@@ -257,7 +211,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(241, 103);
+            this.label4.Location = new System.Drawing.Point(260, 31);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 13);
             this.label4.TabIndex = 1;
@@ -364,11 +318,136 @@
             this.lbsubTB.TabIndex = 6;
             this.lbsubTB.Text = "Thông báo:";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.gridSanPham);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 342);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(789, 303);
+            this.panel1.TabIndex = 7;
+            // 
+            // gridSanPham
+            // 
+            this.gridSanPham.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridSanPham.EmbeddedNavigator.Click += new System.EventHandler(this.gridSanPham_Click);
+            this.gridSanPham.Location = new System.Drawing.Point(0, 0);
+            this.gridSanPham.MainView = this.gridView1;
+            this.gridSanPham.Name = "gridSanPham";
+            this.gridSanPham.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemImageEdit1});
+            this.gridSanPham.Size = new System.Drawing.Size(789, 303);
+            this.gridSanPham.TabIndex = 0;
+            this.gridSanPham.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            this.gridSanPham.Click += new System.EventHandler(this.gridSanPham_Click);
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.MaSP,
+            this.TenSP,
+            this.DonGia,
+            this.KhuyenMai,
+            this.TrangThai,
+            this.HinhAnh,
+            this.MoTa});
+            this.gridView1.GridControl = this.gridSanPham;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.True;
+            this.gridView1.OptionsPrint.PrintSelectedRowsOnly = true;
+            // 
+            // MaSP
+            // 
+            this.MaSP.Caption = "Mã Sản Phẩm";
+            this.MaSP.FieldName = "MASANPHAM";
+            this.MaSP.Name = "MaSP";
+            this.MaSP.Visible = true;
+            this.MaSP.VisibleIndex = 0;
+            // 
+            // TenSP
+            // 
+            this.TenSP.Caption = "Tên Sản Phẩm";
+            this.TenSP.FieldName = "TENSANPHAM";
+            this.TenSP.Name = "TenSP";
+            this.TenSP.Visible = true;
+            this.TenSP.VisibleIndex = 1;
+            // 
+            // DonGia
+            // 
+            this.DonGia.Caption = "Đơn Giá";
+            this.DonGia.DisplayFormat.FormatString = "N1";
+            this.DonGia.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.DonGia.FieldName = "DONGIA";
+            this.DonGia.Name = "DonGia";
+            this.DonGia.Visible = true;
+            this.DonGia.VisibleIndex = 2;
+            // 
+            // KhuyenMai
+            // 
+            this.KhuyenMai.Caption = "Khuyến Mãi %";
+            this.KhuyenMai.DisplayFormat.FormatString = "N1";
+            this.KhuyenMai.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.KhuyenMai.FieldName = "KHUYENMAI";
+            this.KhuyenMai.Name = "KhuyenMai";
+            this.KhuyenMai.Visible = true;
+            this.KhuyenMai.VisibleIndex = 3;
+            // 
+            // TrangThai
+            // 
+            this.TrangThai.Caption = "Trạng Thái";
+            this.TrangThai.FieldName = "TRANGTHAI";
+            this.TrangThai.Name = "TrangThai";
+            this.TrangThai.Visible = true;
+            this.TrangThai.VisibleIndex = 4;
+            // 
+            // HinhAnh
+            // 
+            this.HinhAnh.Caption = "Hình Ảnh";
+            this.HinhAnh.ColumnEdit = this.repositoryItemImageEdit1;
+            this.HinhAnh.FieldName = "HINHANH";
+            this.HinhAnh.Name = "HinhAnh";
+            this.HinhAnh.Visible = true;
+            this.HinhAnh.VisibleIndex = 5;
+            // 
+            // repositoryItemImageEdit1
+            // 
+            this.repositoryItemImageEdit1.AccessibleRole = System.Windows.Forms.AccessibleRole.Graphic;
+            this.repositoryItemImageEdit1.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.True;
+            this.repositoryItemImageEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemImageEdit1.Name = "repositoryItemImageEdit1";
+            this.repositoryItemImageEdit1.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+            // 
+            // MoTa
+            // 
+            this.MoTa.Caption = "Mô Tả";
+            this.MoTa.FieldName = "MOTA";
+            this.MoTa.Name = "MoTa";
+            this.MoTa.Visible = true;
+            this.MoTa.VisibleIndex = 6;
+            // 
+            // PnBtnMau
+            // 
+            this.PnBtnMau.Location = new System.Drawing.Point(244, 86);
+            this.PnBtnMau.Name = "PnBtnMau";
+            this.PnBtnMau.Size = new System.Drawing.Size(192, 30);
+            this.PnBtnMau.TabIndex = 5;
+            // 
+            // PnColor
+            // 
+            this.PnColor.Location = new System.Drawing.Point(244, 131);
+            this.PnColor.Name = "PnColor";
+            this.PnColor.Size = new System.Drawing.Size(195, 33);
+            this.PnColor.TabIndex = 6;
+            // 
             // FormSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(789, 645);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnThemGH);
             this.Controls.Add(this.lbsubTB);
             this.Controls.Add(this.lbThongBao);
             this.Controls.Add(this.lbSoLuongGioHang);
@@ -376,16 +455,18 @@
             this.Controls.Add(this.cbLoaiSP);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGridView1);
             this.Name = "FormSanPham";
             this.Text = "FormSanPham";
             this.Load += new System.EventHandler(this.FormSanPham_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLSHOPDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridSanPham)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -395,15 +476,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbLoaiSP;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private QLSHOPDataSet qLSHOPDataSet;
         private System.Windows.Forms.BindingSource dataTable1BindingSource;
         private QLSHOPDataSetTableAdapters.DataTable1TableAdapter dataTable1TableAdapter;
@@ -427,5 +501,18 @@
         private System.Windows.Forms.Label lbThongBao;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lbsubTB;
+        private System.Windows.Forms.Panel panel1;
+        private DevExpress.XtraGrid.GridControl gridSanPham;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn MaSP;
+        private DevExpress.XtraGrid.Columns.GridColumn TenSP;
+        private DevExpress.XtraGrid.Columns.GridColumn DonGia;
+        private DevExpress.XtraGrid.Columns.GridColumn KhuyenMai;
+        private DevExpress.XtraGrid.Columns.GridColumn TrangThai;
+        private DevExpress.XtraGrid.Columns.GridColumn HinhAnh;
+        private DevExpress.XtraGrid.Columns.GridColumn MoTa;
+        public DevExpress.XtraEditors.Repository.RepositoryItemImageEdit repositoryItemImageEdit1;
+        private System.Windows.Forms.Panel PnBtnMau;
+        private System.Windows.Forms.Panel PnColor;
     }
 }

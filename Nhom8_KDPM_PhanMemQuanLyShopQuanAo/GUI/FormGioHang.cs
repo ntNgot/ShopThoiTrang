@@ -142,16 +142,16 @@ namespace GUI
 
         private void btnTang_Click(object sender, EventArgs e)
         {
-            int ma = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-            if (sanPhamBLL.kiemTraSLTon(Program.dsGH, ma) == "duyệt")
-            {
-                Program.soLuong++;
-                Program.dsGH.Them(ma, 1);
-                Load_GH();
-                lbThongBao.Text = "Đã tăng thêm 1";
-                return;
-            }
-            MessageBox.Show(sanPhamBLL.kiemTraSLTon(Program.dsGH, ma) + " ");
+            //int ma = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            //if (sanPhamBLL.kiemTraSLTon(Program.dsGH, ma) == "duyệt")
+            //{
+            //    Program.soLuong++;
+            //    Program.dsGH.Them(ma, 1);
+            //    Load_GH();
+            //    lbThongBao.Text = "Đã tăng thêm 1";
+            //    return;
+            //}
+            //MessageBox.Show(sanPhamBLL.kiemTraSLTon(Program.dsGH, ma) + " ");
         }
 
         private void btnGiam_Click(object sender, EventArgs e)

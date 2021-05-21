@@ -50,21 +50,10 @@ namespace GUI.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=. \\ sqlexpress;Initial Catalog=QLSHOP;Persist Security Info=True;User" +
-            " ID=sa;Password=sa")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=\". \\ sqlexpress\";Initial Catalog=QLSHOP;Integrated Security=True")]
         public string QLSHOPConnectionString {
             get {
                 return ((string)(this["QLSHOPConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=. \\ sqlexpress;Initial Catalog=QLSHOP;Integrated Security=True")]
-        public string QLSHOPConnectionString1 {
-            get {
-                return ((string)(this["QLSHOPConnectionString1"]));
             }
         }
     }

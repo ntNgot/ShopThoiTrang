@@ -75,16 +75,16 @@ namespace GUI
             setupItem_Types(ListSanPham);
             this.itemNav.Caption = $"{ctr.Text}";
         }
-        //public void loadTN()
-        //{
-        //    splashScreenManager1.ShowWaitForm();
-        //    setupItem_TypesProduct();
-        //    //this.itemNav.Caption = $"{accordionControlElementBill.Text}";
-        //    this.itemNav.Caption = $"{accordionControlElementHome.Text}";
-        //    //setupItem_Types();
-        //    splashScreenManager1.CloseWaitForm();
-        //    lbSPVuaChon.Text = "Ưu đãi Tháng 5: Giảm 10% cho khách hàng có thẻ thành viên và hóa đơn từ 1 tr!";
-        //}
+        public void loadTN()
+        {
+            splashScreenManager1.ShowWaitForm();
+            setupItem_TypesProduct();
+            //this.itemNav.Caption = $"{accordionControlElementBill.Text}";
+            this.itemNav.Caption = $"{accordionControlElementHome.Text}";
+            //setupItem_Types();
+            splashScreenManager1.CloseWaitForm();
+            lbSPVuaChon.Text = "Ưu đãi Tháng 5: Giảm 10% cho khách hàng có thẻ thành viên và hóa đơn từ 1 tr!";
+        }
         FormHome frmHome ;
         public void FormThuNgan_Load(object sender, EventArgs e)
         {
@@ -96,7 +96,7 @@ namespace GUI
             frmHome = new FormHome();
             this.container.Controls.Add(frmHome);
             frmHome.Dock = DockStyle.Fill;
-            //this.itemNav.Caption = "{accordionControlElementBill.Text}";
+            this.itemNav.Caption = "{accordionControlElementBill.Text}";
             this.itemNav.Caption = $"{accordionControlElementHome.Text}";
             //setupItem_Types();
             splashScreenManager1.CloseWaitForm();
@@ -104,8 +104,8 @@ namespace GUI
         }
         public void removeFrmHome()
         {
-            //this.container.Controls.Remove(frmHome);
-            //this.container.Controls.Clear();
+            this.container.Controls.Remove(frmHome);
+            this.container.Controls.Clear();
             Program.formTN.container.Controls.Clear();
         }
         public void setupItem_Types(List<SANPHAM> listSanPham)
@@ -369,10 +369,10 @@ namespace GUI
             panelControl.Controls.Add(labelTrangThai);
             top +=30;
 
-            LabelControl labelSoLuongTon = new LabelControl();
-            setupControls.setupLabel(labelSoLuongTon, top, left, "Số lượng: "+sanpham.SOLUONGTON + " hàng");
-            panelControl.Controls.Add(labelSoLuongTon);
-            top += 30;
+            //LabelControl labelSoLuongTon = new LabelControl();
+            //setupControls.setupLabel(labelSoLuongTon, top, left, "Số lượng: "+sanpham.SOLUONGTON + " hàng");
+            //panelControl.Controls.Add(labelSoLuongTon);
+            //top += 30;
 
             LabelControl labelDonGia = new LabelControl();
             setupControls.setupLabel(labelDonGia, top, left, "Đơn giá: " + sanpham.DONGIA + " VND");
@@ -408,19 +408,19 @@ namespace GUI
 
         private void BtnBuy_Click(object sender, EventArgs e)
         {
-            SimpleButton ctr = (SimpleButton)sender;
-            int ma = int.Parse(ctr.Tag.ToString());
-            if (sanphamBLL.kiemTraSLTon(Program.dsGH, ma) == "duyệt")
-            {
-                Program.soLuong++;
-                this.barButtonItemCart.Caption = "CART(" + Program.soLuong.ToString() + ")";
+            //SimpleButton ctr = (SimpleButton)sender;
+            //int ma = int.Parse(ctr.Tag.ToString());
+            //if (sanphamBLL.kiemTraSLTon(Program.dsGH, ma) == "duyệt")
+            //{
+            //    Program.soLuong++;
+            //    this.barButtonItemCart.Caption = "CART(" + Program.soLuong.ToString() + ")";
 
-                SANPHAM sp = sanphamBLL.detailSanpham(int.Parse(ctr.Tag.ToString()));
-                Program.dsGH.Them(ma, 1);
-                lbSPVuaChon.Text = "Sản phẩm vừa chọn vào Giỏ Hàng: " + sp.TENSANPHAM;
-                return;
-            }
-            lbSPVuaChon.Text = sanphamBLL.kiemTraSLTon(Program.dsGH, ma);
+            //    SANPHAM sp = sanphamBLL.detailSanpham(int.Parse(ctr.Tag.ToString()));
+            //    Program.dsGH.Them(ma, 1);
+            //    lbSPVuaChon.Text = "Sản phẩm vừa chọn vào Giỏ Hàng: " + sp.TENSANPHAM;
+            //    return;
+            //}
+            //lbSPVuaChon.Text = sanphamBLL.kiemTraSLTon(Program.dsGH, ma);
 
 
 

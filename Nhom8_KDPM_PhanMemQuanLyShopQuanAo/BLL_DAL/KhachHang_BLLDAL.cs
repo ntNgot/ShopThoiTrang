@@ -8,7 +8,7 @@ namespace BLL_DAL
 {
     public class KhachHang_BLLDAL
     {
-        dbQLShopDataContext db = new dbQLShopDataContext();
+        QLSHOPDataContext db = new QLSHOPDataContext();
         public KHACHHANG TimKhachHang(string tenKH)
         {
             return db.KHACHHANGs.Where(t => t.TENKHACHHANG == tenKH).FirstOrDefault();
@@ -108,32 +108,30 @@ namespace BLL_DAL
                 CHITIETHOADON ct = new CHITIETHOADON();
                 if (DateTime.Now.Month == 5 && GH.tongThanhTien() >=1000000)
                 {
-                    ct.TONGTIEN = int.Parse((sp.thanhTien).ToString());
+                    ct.THANHTIEN = int.Parse((sp.thanhTien).ToString());
                     //ct.KHUYENMAI= int.Parse((sp.thanhTien).ToString());
-                    ct.KHUYENMAI = 0;
                 }
                 else
                 {
-                    ct.TONGTIEN = sp.thanhTien;
-                    ct.KHUYENMAI = 0;
+                    ct.THANHTIEN = sp.thanhTien;
                 }
                 ct.MAHOADON = hd.MAHOADON;
-                ct.MASANPHAM = sp.iMaSanPham;
+                ct.MACHITIETSP = sp.iMaSanPham;
                 ct.DONGIABAN = int.Parse(sp.iDonGia.ToString());
                 ct.SOLUONG = sp.iSoLuong;
                 db.CHITIETHOADONs.InsertOnSubmit(ct);
                 db.SubmitChanges();
             }
-            foreach (CartItem item in GH.dsSP)
-            {
-                SANPHAM sp = db.SANPHAMs.Where(t => t.MASANPHAM == item.iMaSanPham).FirstOrDefault();
-                sp.SOLUONGTON -= item.iSoLuong;
-                if (sp.SOLUONGTON == 0)
-                {
-                    sp.TRANGTHAI = false;
-                }
-                db.SubmitChanges();
-            }
+            //foreach (CartItem item in GH.dsSP)
+            //{
+            //    SANPHAM sp = db.SANPHAMs.Where(t => t.MASANPHAM == item.iMaSanPham).FirstOrDefault();
+            //    sp.SOLUONGTON -= item.iSoLuong;
+            //    if (sp.SOLUONGTON == 0)
+            //    {
+            //        sp.TRANGTHAI = false;
+            //    }
+            //    db.SubmitChanges();
+            //}
 
         }
     }

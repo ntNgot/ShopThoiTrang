@@ -20,7 +20,7 @@ namespace BLL_DAL
             get { return iSoLuong * iDonGia; }
         }
         //tạo giỏ hàng
-        dbQLShopDataContext db = new dbQLShopDataContext();
+        QLSHOPDataContext db = new QLSHOPDataContext();
         public CartItem()
         {
             this.iMaSanPham = 0;

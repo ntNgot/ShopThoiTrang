@@ -12,8 +12,8 @@ namespace GUI
     static class Program
     {
         public static FormLogin frmLogin = null;
-        public static string linkURL_SanPham = "\\Image\\sanpham\\";
-        public static string linkURL_LoaiSP = "\\Image\\loaisanpham\\";
+        public static string linkURL_SanPham = "C:\\Users\\Admin\\Desktop\\ShopThoiTrang\\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\\Image\\sanpham\\";
+        public static string linkURL_LoaiSP = "C:\\Users\\Admin\\Desktop\\ShopThoiTrang\\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\\Image\\loaisanpham\\";
         public static FormTN formTN = null;
        
         public static Cart dsGH = new Cart();
@@ -28,13 +28,12 @@ namespace GUI
             Application.SetCompatibleTextRenderingDefault(false);
             frmLogin = new FormLogin();
             //  Application.Run(new FormCart());
-            Application.Run(formTN);
             //using (Reporting.frmPrint frmPrint = new Reporting.frmPrint())
             //{
             //    frmPrint.PrintBillThuNgan(21);
             //    frmPrint.ShowDialog();
             //}
-            //Application.Run(new FormTN());
+           Application.Run(new FormSanPham());
         }
     }
 }

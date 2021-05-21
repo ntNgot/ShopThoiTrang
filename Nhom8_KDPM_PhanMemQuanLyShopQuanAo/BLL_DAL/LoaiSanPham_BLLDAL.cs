@@ -8,7 +8,7 @@ namespace BLL_DAL
 {
     public class LoaiSanPham_BLLDAL
     {
-        dbQLShopDataContext dbContext = new dbQLShopDataContext();
+        QLSHOPDataContext dbContext = new QLSHOPDataContext();
         public IQueryable<LOAISANPHAM> load_DSLoai()
         {
             return dbContext.LOAISANPHAMs.Select(t => t);

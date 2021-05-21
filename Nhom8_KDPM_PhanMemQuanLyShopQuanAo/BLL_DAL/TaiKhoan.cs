@@ -8,8 +8,8 @@ namespace BLL_DAL
 {
     public class TaiKhoan
     {
-        
-        dbQLShopDataContext dbContext = new dbQLShopDataContext();
+
+        QLSHOPDataContext dbContext = new QLSHOPDataContext();
         public TAIKHOANNHANVIEN FindTaiKhoan(string tenTaiKhoan, string matKhau)
         {
             try

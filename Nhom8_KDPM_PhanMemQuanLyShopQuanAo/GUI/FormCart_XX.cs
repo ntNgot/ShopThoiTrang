@@ -21,7 +21,7 @@ namespace GUI
             
 
         }
-        dbQLShopDataContext db = new dbQLShopDataContext();
+        QLSHOPDataContext db = new QLSHOPDataContext();
         SanPham_BLLDAL sanPhamBLL = new SanPham_BLLDAL();
         KhachHang_BLLDAL khbll = new KhachHang_BLLDAL();
         HoaDonBLLDAL hd = new HoaDonBLLDAL();
@@ -50,7 +50,7 @@ namespace GUI
         {
             try
             {
-                dbQLShopDataContext db = new dbQLShopDataContext();
+                QLSHOPDataContext db = new QLSHOPDataContext();
                 //Tao Gio Hang
                 if (Program.dsGH.dsSP.Count == 0)
                 {
@@ -99,11 +99,11 @@ namespace GUI
                     //dummyReport.ShowPreviewDialog();
                     //printTool.Print("Bill sold");
 
-                    using(Reporting.frmPrint frmPrint = new Reporting.frmPrint())
-                    {
-                        frmPrint.PrintBillThuNgan(hd.getMaHDMoi().MAHOADON);
-                        frmPrint.ShowDialog();
-                    }
+                    //using(Reporting.frmPrint frmPrint = new Reporting.frmPrint())
+                    //{
+                    //    frmPrint.PrintBillThuNgan(hd.getMaHDMoi().MAHOADON);
+                    //    frmPrint.ShowDialog();
+                    //}
 
                     Program.dsGH.dsSP.Clear();
                     Program.soLuong = 0;
@@ -158,15 +158,15 @@ namespace GUI
 
         private void repositoryItemButtonEditTHEMSL1_Click(object sender, EventArgs e)
         {
-            int ma = (gridView1.GetFocusedRow() as CartItem).iMaSanPham;
-            if (sanPhamBLL.kiemTraSLTon(Program.dsGH, ma) == "duyệt")
-            {
-                Program.soLuong++;
-                Program.dsGH.Them(ma, 1);
-                Load_DuLieu();
-                return;
-            }
-            MessageBox.Show(sanPhamBLL.kiemTraSLTon(Program.dsGH, ma) +" ") ;
+            //int ma = (gridView1.GetFocusedRow() as CartItem).iMaSanPham;
+            //if (sanPhamBLL.kiemTraSLTon(Program.dsGH, ma) == "duyệt")
+            //{
+            //    Program.soLuong++;
+            //    Program.dsGH.Them(ma, 1);
+            //    Load_DuLieu();
+            //    return;
+            //}
+            //MessageBox.Show(sanPhamBLL.kiemTraSLTon(Program.dsGH, ma) +" ") ;
         }
 
         private void repositoryItemButtonEditGIAMSL_Click(object sender, EventArgs e)

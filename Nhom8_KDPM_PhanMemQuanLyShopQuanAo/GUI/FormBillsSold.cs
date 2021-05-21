@@ -27,8 +27,8 @@ namespace GUI
 
         private void FormBillsSold_Load(object sender, EventArgs e)
         {
-            gridControl1.DataSource = hoaDonBLL.load_listHD().ToList<View_HoaDon>();
-            this.splashScreenManager1.CloseWaitForm();
+            //gridControl1.DataSource = hoaDonBLL.load_listHD().ToList<View_HoaDon>();
+            //this.splashScreenManager1.CloseWaitForm();
         }
 
         private void gridControl1_DoubleClick(object sender, EventArgs e)

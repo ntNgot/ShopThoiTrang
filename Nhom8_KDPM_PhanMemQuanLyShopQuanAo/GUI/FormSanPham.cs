@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL_DAL;
+using DevExpress.XtraEditors;
+
 namespace GUI
 {
     public partial class FormSanPham : Form
@@ -16,22 +18,25 @@ namespace GUI
         {
             InitializeComponent();
         }
-        dbQLShopDataContext db = new dbQLShopDataContext();
+        QLSHOPDataContext db = new QLSHOPDataContext();
         LoaiSanPham_BLLDAL loaiSP_BLL = new LoaiSanPham_BLLDAL();
         SanPham_BLLDAL sanPham_BLL = new SanPham_BLLDAL();
-        
-        
+        ChiTietSanPham_BLL ctspList = new ChiTietSanPham_BLL();
 
+        string mau;
+        string size;
         private void FormSanPham_Load(object sender, EventArgs e)
         {
-            //// TODO: This line of code loads data into the 'qLSHOPDataSet.DataTable1' table. You can move, or remove it, as needed.
-            //this.dataTable1TableAdapter.Fill(this.qLSHOPDataSet.DataTable1);
-            //Load_SP();
+         
+            Load_SP();
         }
         public void Load_SP()
         {
+            gridSanPham.DataSource = sanPham_BLL.loadSP();
             cbLoaiSP.DataSource = loaiSP_BLL.load_LoaiSP().ToList();
             cbLoaiSP.Tag = cbLoaiSP;
+
+           
             
             
         }
@@ -82,8 +87,6 @@ namespace GUI
         private void btnThemGH_Click(object sender, EventArgs e)
         {
             //try { SANPHAM sanpham = sanPham_BLL.detailSanpham(int.Parse(txtMaSP.Text));
-            
-
             //if (sanPham_BLL.kiemTraSLTon(Program.dsGH, sanpham.MASANPHAM) == "duyệt")
             //{
             //    if (sanpham == null) return;
@@ -98,15 +101,100 @@ namespace GUI
             //}
 
             //catch { }
+
+            //c2:
+            CHITIETSANPHAM ctSP = ctspList.timCTSP(int.Parse(txtMaSP.Text), mau, size);
+            Program.dsGH.Them(ctSP.MACHITIETSP, 1);
            
 
 
 
         }
         int x = 354, y = 9, a = 2;
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gridSanPham_Click(object sender, EventArgs e)
+        {
+            int maSP = int.Parse(gridView1.GetFocusedRowCellValue("MASANPHAM").ToString());
+            SANPHAM sanpham = sanPham_BLL.detailSanpham(maSP);
+            pictureBox1.Image = new Bitmap(Application.StartupPath + "\\Image\\sanpham\\" + sanpham.HINHANH);
+            txtMaSP.Text = sanpham.MASANPHAM.ToString();
+            txtTenSP.Text = sanpham.TENSANPHAM;
+            txtDonGia.Text = sanpham.DONGIA.ToString();
+            txtMoTa.Text = sanpham.MOTA;
+
+            if (sanpham.TRANGTHAI == true)
+            {
+                txtTrangThai.Text = "Còn hàng";
+            }
+            else
+                txtTrangThai.Text = "Hết hàng";
+
+
+
+            List<CHITIETSANPHAM> listCTSP = ctspList.timDSCT(maSP);
+            List<string> listMau=new List<string>();
+            PnBtnMau.Controls.Clear();
+            foreach (CHITIETSANPHAM item in listCTSP)
+            {
+                int kq=0;
+                foreach (string color in listMau)
+                {
+                    if (color == item.MAU.TENMAU)
+                        kq = 1;
+                }
+                if (kq == 0)
+                {
+                    listMau.Add(item.MAU.TENMAU);
+                }    
+                
+            }
+            foreach(string item in listMau)
+            {
+                Button mau = new Button();
+                mau.Text = item;
+                mau.Size = new System.Drawing.Size(60, 40);
+                PnBtnMau.Controls.Add(mau);
+                mau.Click += btnMau_click;
+                mau.Dock = DockStyle.Left;
+                mau.Tag = item;
+           
+            }   
+           
+            
+        }
+
         //637, 8
+        public void btnMau_click(object sender, EventArgs e)
+        {
+            PnColor.Controls.Clear();
+            Button ctr = (Button)sender;
+            List<CHITIETSANPHAM> ctsp = ctspList.timDSTheo_Mau(int.Parse(txtMaSP.Text), ctr.Tag.ToString());
+            mau = ctr.Tag.ToString();
+            ctr.Enabled = false;
+            foreach (CHITIETSANPHAM item in ctsp)
+            {
+                Button color = new Button();
+                color.Text = item.SIZE.TENSIZE;
+                color.Tag = color.Text;
+                color.Click += btnSize_Click;
+                color.Dock = DockStyle.Left;
+                PnColor.Controls.Add(color);
+                color.Size = new System.Drawing.Size(60, 40);
 
 
+            }
+        }
+        public void btnSize_Click(object sender, EventArgs e)
+        {
+            Button ctr = (Button)sender;
+            size = ctr.Tag.ToString();
+
+        }
         private void timer1_Tick_1(object sender, EventArgs e)
         {
             try

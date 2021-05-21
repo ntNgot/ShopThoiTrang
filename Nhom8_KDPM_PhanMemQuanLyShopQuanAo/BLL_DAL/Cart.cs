@@ -8,7 +8,7 @@ namespace BLL_DAL
 {
     public class Cart
     {
-        dbQLShopDataContext data = new dbQLShopDataContext();
+        QLSHOPDataContext data = new QLSHOPDataContext();
 
         public List<CartItem> dsSP;
         public Cart()
