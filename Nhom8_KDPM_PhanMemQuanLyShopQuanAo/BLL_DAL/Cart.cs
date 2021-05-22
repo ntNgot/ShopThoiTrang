@@ -42,17 +42,18 @@ namespace BLL_DAL
         //thêm sản phẩm
         public int Them(int iMaSP, int soLuong)
         {
-            CartItem sanPham = dsSP.SingleOrDefault(n => n.iMaSanPham == iMaSP);
+            CartItem sanPham = dsSP.SingleOrDefault(n => n.iMaChiTietSP == iMaSP);
             if (sanPham == null)
             {
                 CartItem sp = new CartItem(iMaSP);
+                sp.iSoLuong = soLuong;
                 if (sp == null)
                     return -1;
                 dsSP.Add(sp);
             }
             else
             {
-                sanPham.iSoLuong++;
+                sanPham.iSoLuong+= soLuong;
             }
             return 1;
         }
@@ -60,7 +61,7 @@ namespace BLL_DAL
         {
             foreach (CartItem item in dsSP)
             {
-                if (item.iMaSanPham == iMaSP)
+                if (item.iMaChiTietSP == iMaSP)
                 {
                     dsSP.Remove(item);
                     return;
@@ -70,7 +71,7 @@ namespace BLL_DAL
         }
         public Boolean giamSL(int maSP)
         {
-            CartItem cartItem = dsSP.Where(t => t.iMaSanPham == maSP).FirstOrDefault();
+            CartItem cartItem = dsSP.Where(t => t.iMaChiTietSP == maSP).FirstOrDefault();
             if (cartItem.iSoLuong == 1)
             {
                 return false;

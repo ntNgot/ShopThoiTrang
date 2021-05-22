@@ -55,10 +55,10 @@ namespace GUI
             // container
             // 
             this.container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.container.Location = new System.Drawing.Point(337, 42);
-            this.container.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.container.Location = new System.Drawing.Point(225, 29);
+            this.container.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.container.Name = "container";
-            this.container.Size = new System.Drawing.Size(1043, 743);
+            this.container.Size = new System.Drawing.Size(695, 508);
             this.container.TabIndex = 0;
             // 
             // fluentFormDefaultManager1
@@ -120,12 +120,12 @@ namespace GUI
             this.accordionControlElementBills,
             this.accordionControlElementBill,
             this.accordionControlElementLogOut});
-            this.accordionControlContainer.Location = new System.Drawing.Point(0, 42);
-            this.accordionControlContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.accordionControlContainer.Location = new System.Drawing.Point(0, 29);
+            this.accordionControlContainer.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.accordionControlContainer.Name = "accordionControlContainer";
             this.accordionControlContainer.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
             this.accordionControlContainer.ShowFilterControl = DevExpress.XtraBars.Navigation.ShowFilterControl.Always;
-            this.accordionControlContainer.Size = new System.Drawing.Size(337, 743);
+            this.accordionControlContainer.Size = new System.Drawing.Size(225, 508);
             this.accordionControlContainer.TabIndex = 1;
             this.accordionControlContainer.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -138,6 +138,7 @@ namespace GUI
             // 
             // accordionControlElementProduct
             // 
+            this.accordionControlElementProduct.Expanded = true;
             this.accordionControlElementProduct.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("accordionControlElementProduct.ImageOptions.SvgImage")));
             this.accordionControlElementProduct.Name = "accordionControlElementProduct";
             this.accordionControlElementProduct.Text = "PRODUCT";
@@ -174,9 +175,9 @@ namespace GUI
             this.itemNav});
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Manager = this.fluentFormDefaultManager1;
-            this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1380, 42);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(920, 29);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             this.fluentDesignFormControl1.TitleItemLinks.Add(this.skinDropDownButtonItem1);
@@ -188,10 +189,9 @@ namespace GUI
             // 
             this.lbSPVuaChon.AutoSize = true;
             this.lbSPVuaChon.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSPVuaChon.Location = new System.Drawing.Point(309, 12);
-            this.lbSPVuaChon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbSPVuaChon.Location = new System.Drawing.Point(206, 8);
             this.lbSPVuaChon.Name = "lbSPVuaChon";
-            this.lbSPVuaChon.Size = new System.Drawing.Size(0, 29);
+            this.lbSPVuaChon.Size = new System.Drawing.Size(0, 19);
             this.lbSPVuaChon.TabIndex = 0;
             // 
             // splashScreenManager1
@@ -206,15 +206,15 @@ namespace GUI
             // 
             // FormTN
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1380, 785);
+            this.ClientSize = new System.Drawing.Size(920, 537);
             this.ControlContainer = this.container;
             this.Controls.Add(this.container);
             this.Controls.Add(this.accordionControlContainer);
             this.Controls.Add(this.fluentDesignFormControl1);
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.Name = "FormTN";
             this.NavigationControl = this.accordionControlContainer;
             this.Text = "FormTN";
