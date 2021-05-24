@@ -504,7 +504,6 @@ C:\Users\Admin\Desktop\Công nghệ PM\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\ob
 C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\bin\Debug\GUI.exe.config
 C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\bin\Debug\GUI.exe
 C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\bin\Debug\GUI.pdb
-C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\bin\Debug\BLL_DAL.dll
 C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\bin\Debug\DevExpress.BonusSkins.v19.2.dll
 C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\bin\Debug\DevExpress.Charts.v19.2.Core.dll
 C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\bin\Debug\DevExpress.CodeParser.v19.2.dll
@@ -736,6 +735,10 @@ C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\bin\
 C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\bin\Debug\ru\DevExpress.XtraScheduler.v19.2.Core.resources.dll
 C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.FormNhapHang.resources
 C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.formNhapHang_main.resources
-C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
-C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.UserControl_NhapHang.resources
 C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.UsercontrolCart_PhieuNhap.resources
+C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\bin\Debug\BLL_DAL.dll
+C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.V_NhapHang.UserControls_DSPhieuNhap.resources
+C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.V_NhapHang.UserControl_ALLPhieuNhap.resources
+C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.Reporting.ReportPhieuNhap.resources
+C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.Menu_Ribbon.resources

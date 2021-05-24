@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using GUI.V_NhapHang;
 namespace GUI
 {
     public partial class FormNhapHang : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
@@ -32,6 +32,22 @@ namespace GUI
             frm.Dock = DockStyle.Fill;
             
 
+        }
+
+        private void accordionControlElement8_Click(object sender, EventArgs e)
+        {
+            pnMain.Controls.Clear();
+            UserControls_DSPhieuNhap frm = new UserControls_DSPhieuNhap();
+            pnMain.Controls.Add(frm);
+            frm.Dock = DockStyle.Fill;
+        }
+
+        private void accordionControlElement9_Click(object sender, EventArgs e)
+        {
+            pnMain.Controls.Clear();
+            UserControl_ALLPhieuNhap frm = new UserControl_ALLPhieuNhap();
+            pnMain.Controls.Add(frm);
+            frm.Dock = DockStyle.Fill;
         }
     }
 }

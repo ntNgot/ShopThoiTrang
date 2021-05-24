@@ -91,7 +91,7 @@ namespace GUI
                     //ReportPrintTool printTool = new ReportPrintTool(reportHoaDon);
                     //printTool.PrintDialog();
                     //printTool.Print();
-                    
+                   
                     //reportHoaDon.CreateDocument(false);
                     //XtraReport dummyReport = new XtraReport();
 

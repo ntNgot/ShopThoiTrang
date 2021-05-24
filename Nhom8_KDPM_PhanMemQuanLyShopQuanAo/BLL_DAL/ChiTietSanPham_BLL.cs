@@ -37,5 +37,10 @@ namespace BLL_DAL
         {
             return db.MAUs.ToList();
         }
+        public void themCTSP(CHITIETSANPHAM ctsp)
+        {
+            db.CHITIETSANPHAMs.InsertOnSubmit(ctsp);
+            db.SubmitChanges();
+        }
     }
 }

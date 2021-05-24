@@ -143,6 +143,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Bittorrent_Plus_icon {
+            get {
+                object obj = ResourceManager.GetObject("Bittorrent-Plus-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap boorderitem_32x32 {
             get {
                 object obj = ResourceManager.GetObject("boorderitem_32x32", resourceCulture);

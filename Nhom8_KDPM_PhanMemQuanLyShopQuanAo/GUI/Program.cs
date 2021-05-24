@@ -27,13 +27,13 @@ namespace GUI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             frmLogin = new FormLogin();
-            //  Application.Run(new FormCart());
+          //  Application.Run(new FormCart());
             //using (Reporting.frmPrint frmPrint = new Reporting.frmPrint())
             //{
             //    frmPrint.PrintBillThuNgan(21);
             //    frmPrint.ShowDialog();
             //}
-           Application.Run(new FormNhapHang());
+           Application.Run(new Menu_Ribbon());
         }
     }
 }

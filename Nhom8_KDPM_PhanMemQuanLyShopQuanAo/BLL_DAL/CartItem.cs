@@ -36,7 +36,7 @@ namespace BLL_DAL
                 iTenSanPham = ctsp.SANPHAM.TENSANPHAM;
                 iSize = ctsp.SIZE.TENSIZE;
                 imausac = ctsp.MAU.TENMAU;
-                iDonGia = int.Parse(ctsp.SANPHAM.DONGIA.ToString());
+                iDonGia = int.Parse((ctsp.SANPHAM.DONGIA*0.7).ToString());
                 iHinhAnh = ctsp.HINHANH;
                 iSoLuong = 1;
             }

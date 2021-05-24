@@ -99,10 +99,27 @@
     <Compile Include="DetailForm.Designer.cs">
       <DependentUpon>DetailForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormNhapHang.cs">
+    <Compile Include="Menu_Ribbon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormNhapHang.Designer.cs">
+    <Compile Include="Menu_Ribbon.Designer.cs">
+      <DependentUpon>Menu_Ribbon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\ReportPhieuNhap.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporting\ReportPhieuNhap.Designer.cs">
+      <DependentUpon>ReportPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShopThoiTrang_DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShopThoiTrang_DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="V_NhapHang\FormNhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V_NhapHang\FormNhapHang.Designer.cs">
       <DependentUpon>FormNhapHang.cs</DependentUpon>
     </Compile>
     <Compile Include="FormBillsSold.cs">
@@ -147,10 +164,10 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="formNhapHang_main.cs">
+    <Compile Include="V_NhapHang\formNhapHang_main.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="formNhapHang_main.Designer.cs">
+    <Compile Include="V_NhapHang\formNhapHang_main.Designer.cs">
       <DependentUpon>formNhapHang_main.cs</DependentUpon>
     </Compile>
     <Compile Include="formOurProduct.cs">
@@ -216,17 +233,23 @@
     </Compile>
     <Compile Include="RepositoryItemGraphicsEdit.cs" />
     <Compile Include="SetupControls.cs" />
-    <Compile Include="UsercontrolCart_PhieuNhap.cs">
+    <Compile Include="V_NhapHang\UsercontrolCart_PhieuNhap.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UsercontrolCart_PhieuNhap.Designer.cs">
+    <Compile Include="V_NhapHang\UsercontrolCart_PhieuNhap.Designer.cs">
       <DependentUpon>UsercontrolCart_PhieuNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl_NhapHang.cs">
+    <Compile Include="V_NhapHang\UserControls_DSPhieuNhap.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl_NhapHang.Designer.cs">
-      <DependentUpon>UserControl_NhapHang.cs</DependentUpon>
+    <Compile Include="V_NhapHang\UserControls_DSPhieuNhap.Designer.cs">
+      <DependentUpon>UserControls_DSPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V_NhapHang\UserControl_ALLPhieuNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="V_NhapHang\UserControl_ALLPhieuNhap.Designer.cs">
+      <DependentUpon>UserControl_ALLPhieuNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="WaitForm1.cs">
       <SubType>Form</SubType>
@@ -237,7 +260,13 @@
     <EmbeddedResource Include="DetailForm.resx">
       <DependentUpon>DetailForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormNhapHang.resx">
+    <EmbeddedResource Include="Menu_Ribbon.resx">
+      <DependentUpon>Menu_Ribbon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\ReportPhieuNhap.resx">
+      <DependentUpon>ReportPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V_NhapHang\FormNhapHang.resx">
       <DependentUpon>FormNhapHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormBillsSold.resx">
@@ -264,7 +293,7 @@
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formNhapHang_main.resx">
+    <EmbeddedResource Include="V_NhapHang\formNhapHang_main.resx">
       <DependentUpon>formNhapHang_main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formOurProduct.resx">
@@ -305,11 +334,14 @@
     <EmbeddedResource Include="Reporting\XtraReport1.resx">
       <DependentUpon>XtraReport1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UsercontrolCart_PhieuNhap.resx">
+    <EmbeddedResource Include="V_NhapHang\UsercontrolCart_PhieuNhap.resx">
       <DependentUpon>UsercontrolCart_PhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl_NhapHang.resx">
-      <DependentUpon>UserControl_NhapHang.cs</DependentUpon>
+    <EmbeddedResource Include="V_NhapHang\UserControls_DSPhieuNhap.resx">
+      <DependentUpon>UserControls_DSPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V_NhapHang\UserControl_ALLPhieuNhap.resx">
+      <DependentUpon>UserControl_ALLPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WaitForm1.resx">
       <DependentUpon>WaitForm1.cs</DependentUpon>
@@ -340,6 +372,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="ShopThoiTrang_DataSet.xsc">
+      <DependentUpon>ShopThoiTrang_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ShopThoiTrang_DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShopThoiTrang_DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ShopThoiTrang_DataSet.xss">
+      <DependentUpon>ShopThoiTrang_DataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="QLSHOPDataSet.xsc">
@@ -474,6 +517,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\add_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bittorrent-Plus-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -171,9 +171,6 @@ namespace BLL_DAL
             this.Detail.HierarchyPrintOptions.Indent = 19.2F;
             this.Detail.Name = "Detail";
             // 
-            // bindingSource1
-            // 
-            // 
             // DetailReport
             // 
             this.DetailReport.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {

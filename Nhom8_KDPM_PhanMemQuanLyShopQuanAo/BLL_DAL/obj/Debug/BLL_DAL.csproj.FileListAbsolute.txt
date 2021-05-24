@@ -638,4 +638,3 @@ C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\BLL_DAL\
 C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\BLL_DAL\obj\Debug\BLL_DAL.csproj.CopyComplete
 C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\BLL_DAL\obj\Debug\BLL_DAL.dll
 C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\BLL_DAL\obj\Debug\BLL_DAL.pdb
-C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\BLL_DAL\obj\Debug\BLL_DAL.csprojAssemblyReference.cache
