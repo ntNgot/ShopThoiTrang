@@ -29,10 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSanPham));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.label1 = new System.Windows.Forms.Label();
             this.cbLoaiSP = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnThemGH = new System.Windows.Forms.Button();
+            this.PnColor = new System.Windows.Forms.Panel();
+            this.PnBtnMau = new System.Windows.Forms.Panel();
             this.txtMoTa = new System.Windows.Forms.RichTextBox();
             this.txtMaSP = new System.Windows.Forms.TextBox();
             this.txtTrangThai = new System.Windows.Forms.TextBox();
@@ -67,8 +74,7 @@
             this.HinhAnh = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemImageEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageEdit();
             this.MoTa = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.PnBtnMau = new System.Windows.Forms.Panel();
-            this.PnColor = new System.Windows.Forms.Panel();
+            this.buttonEdit1 = new DevExpress.XtraEditors.ButtonEdit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLSHOPDataSet)).BeginInit();
@@ -77,6 +83,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridSanPham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -123,15 +130,19 @@
             this.groupBox1.Text = "Sản Phẩm";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // btnThemGH
+            // PnColor
             // 
-            this.btnThemGH.Location = new System.Drawing.Point(616, 1);
-            this.btnThemGH.Name = "btnThemGH";
-            this.btnThemGH.Size = new System.Drawing.Size(59, 39);
-            this.btnThemGH.TabIndex = 4;
-            this.btnThemGH.Text = "Thêm vào Giỏ Hàng";
-            this.btnThemGH.UseVisualStyleBackColor = true;
-            this.btnThemGH.Click += new System.EventHandler(this.btnThemGH_Click);
+            this.PnColor.Location = new System.Drawing.Point(244, 131);
+            this.PnColor.Name = "PnColor";
+            this.PnColor.Size = new System.Drawing.Size(195, 33);
+            this.PnColor.TabIndex = 6;
+            // 
+            // PnBtnMau
+            // 
+            this.PnBtnMau.Location = new System.Drawing.Point(244, 86);
+            this.PnBtnMau.Name = "PnBtnMau";
+            this.PnBtnMau.Size = new System.Drawing.Size(192, 30);
+            this.PnBtnMau.TabIndex = 5;
             // 
             // txtMoTa
             // 
@@ -272,6 +283,7 @@
             this.tableAdapterManager.CHITIETHOADONTableAdapter = null;
             this.tableAdapterManager.Connection = null;
             this.tableAdapterManager.KHACHHANGTableAdapter = null;
+            this.tableAdapterManager.PHIEUNHAPTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = GUI.QLSHOPDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // lbSoLuongGioHang
@@ -427,27 +439,25 @@
             this.MoTa.Visible = true;
             this.MoTa.VisibleIndex = 6;
             // 
-            // PnBtnMau
+            // buttonEdit1
             // 
-            this.PnBtnMau.Location = new System.Drawing.Point(244, 86);
-            this.PnBtnMau.Name = "PnBtnMau";
-            this.PnBtnMau.Size = new System.Drawing.Size(192, 30);
-            this.PnBtnMau.TabIndex = 5;
-            // 
-            // PnColor
-            // 
-            this.PnColor.Location = new System.Drawing.Point(244, 131);
-            this.PnColor.Name = "PnColor";
-            this.PnColor.Size = new System.Drawing.Size(195, 33);
-            this.PnColor.TabIndex = 6;
+            this.buttonEdit1.EditValue = "Thêm";
+            this.buttonEdit1.Location = new System.Drawing.Point(599, 1);
+            this.buttonEdit1.Name = "buttonEdit1";
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            this.buttonEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.buttonEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.buttonEdit1.Size = new System.Drawing.Size(78, 38);
+            this.buttonEdit1.TabIndex = 8;
             // 
             // FormSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(789, 645);
+            this.Controls.Add(this.buttonEdit1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnThemGH);
             this.Controls.Add(this.lbsubTB);
             this.Controls.Add(this.lbThongBao);
             this.Controls.Add(this.lbSoLuongGioHang);
@@ -467,6 +477,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridSanPham)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -482,7 +493,6 @@
         private System.Windows.Forms.BindingSource dataTable1BindingSource;
         private QLSHOPDataSetTableAdapters.DataTable1TableAdapter dataTable1TableAdapter;
         private QLSHOPDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.Button btnThemGH;
         private System.Windows.Forms.RichTextBox txtMoTa;
         private System.Windows.Forms.TextBox txtMaSP;
         private System.Windows.Forms.TextBox txtTrangThai;
@@ -514,5 +524,6 @@
         public DevExpress.XtraEditors.Repository.RepositoryItemImageEdit repositoryItemImageEdit1;
         private System.Windows.Forms.Panel PnBtnMau;
         private System.Windows.Forms.Panel PnColor;
+        private DevExpress.XtraEditors.ButtonEdit buttonEdit1;
     }
 }

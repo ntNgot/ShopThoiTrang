@@ -33,7 +33,7 @@ namespace GUI
             //    frmPrint.PrintBillThuNgan(21);
             //    frmPrint.ShowDialog();
             //}
-           Application.Run(new Menu_Ribbon());
+           Application.Run(new FormSanPham());
         }
     }
 }
