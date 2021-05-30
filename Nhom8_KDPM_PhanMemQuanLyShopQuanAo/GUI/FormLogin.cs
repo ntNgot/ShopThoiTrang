@@ -13,7 +13,10 @@ namespace GUI
     public partial class FormLogin : DevExpress.XtraEditors.XtraForm
     {
         TaiKhoan taikhoanBLL = new TaiKhoan();
-        
+        TAIKHOANNHANVIEN taiKhoan = new TAIKHOANNHANVIEN();
+
+        public TAIKHOANNHANVIEN TaiKhoan { get => taiKhoan; set => taiKhoan = value; }
+
         public FormLogin()
         {
             InitializeComponent();
@@ -47,7 +50,7 @@ namespace GUI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if(txtName.Text.Equals("") && txtPass.Text.Equals(""))
+            if (txtName.Text.Equals("") && txtPass.Text.Equals(""))
             {
                 MessageBox.Show("Name user or password cannot be null!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -56,7 +59,7 @@ namespace GUI
             {
                 if (taikhoanBLL.FindTaiKhoan(txtName.Text, txtPass.Text).TRANGTHAI != true)
                 {
-                    MessageBox.Show("Account is not longer active!","NO ACTIVE",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("Account is not longer active!", "NO ACTIVE", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 if (checkEdit1.Checked)
@@ -71,6 +74,7 @@ namespace GUI
                 }
                 TAIKHOANNHANVIEN tk = taikhoanBLL.FindTaiKhoan(txtName.Text, txtPass.Text);
                 NHANVIEN nv = taikhoanBLL.timNVTheoTK(int.Parse(tk.MANHANVIEN.ToString()));
+                taiKhoan = tk;
                 if (nv.CHUCVU == "QuanLy")
                 {
 
@@ -89,38 +93,38 @@ namespace GUI
 
         private void FormLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if(Program.formTN !=null)
+            if (Program.formTN != null)
                 Program.formTN.Close();
         }
 
         private void txtName_Leave(object sender, EventArgs e)
         {
-            //if (txtName.Text.Equals(""))
-            //{
-            //    MessageBox.Show("Name user cannot be null !");
-            //    dxErrorProvider1.SetError(txtName, "Name cannot be null !");
-            //    txtName.Focus();
-            //    return;
-            //}
-            //else
-            //{
-            //    dxErrorProvider1.ClearErrors();
-            //}
+            if (txtName.Text.Equals(""))
+            {
+                MessageBox.Show("Name user cannot be null !");
+                dxErrorProvider1.SetError(txtName, "Name cannot be null !");
+                txtName.Focus();
+                return;
+            }
+            else
+            {
+                dxErrorProvider1.ClearErrors();
+            }
         }
 
         private void txtPass_Leave(object sender, EventArgs e)
         {
-            //if (txtPass.Text.Equals(""))
-            //{
-            //    MessageBox.Show("Password user cannot be null !");
-            //    dxErrorProvider2.SetError(txtPass, "Password cannot be null !");
-            //    txtPass.Focus();
-            //    return;
-            //}
-            //else
-            //{
-            //    dxErrorProvider2.ClearErrors();
-            //}
+            if (txtPass.Text.Equals(""))
+            {
+                MessageBox.Show("Password user cannot be null !");
+                dxErrorProvider2.SetError(txtPass, "Password cannot be null !");
+                txtPass.Focus();
+                return;
+            }
+            else
+            {
+                dxErrorProvider2.ClearErrors();
+            }
         }
 
         private void FormLogin_Load(object sender, EventArgs e)

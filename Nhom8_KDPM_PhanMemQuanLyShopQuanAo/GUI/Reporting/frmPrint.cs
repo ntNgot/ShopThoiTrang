@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using GUI.QLSHOPDataSetTableAdapters;
 using BLL_DAL;
 
 namespace GUI.Reporting

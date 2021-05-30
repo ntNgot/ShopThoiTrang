@@ -2,6 +2,7 @@
 using DevExpress.LookAndFeel;
 using DevExpress.Skins;
 using DevExpress.UserSkins;
+using GUI.Cashier;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +12,13 @@ namespace GUI
 {
     static class Program
     {
+        
         public static FormLogin frmLogin = null;
-        public static string linkURL_SanPham = "E:\\Hoc\\CNPM\\doan\\ShopThoiTrang\\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\\Image\\sanpham\\";
-        public static string linkURL_LoaiSP = "E:\\Hoc\\CNPM\\doan\\ShopThoiTrang\\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\\Image\\loaisanpham\\";
+        public static string linkURL_Image = @"D:\CongNghePhanMem\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\";
+        public static string linkURL_SanPham = @"D:\CongNghePhanMem\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\sanpham\";
+        public static string linkURL_LoaiSP = @"D:\CongNghePhanMem\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\loaisanpham\";
+        public static string linkURL_KhachHang = @"D:\CongNghePhanMem\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\KhachHang\";
+        public static string linkURL_NhanVien = @"D:\CongNghePhanMem\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\nhanvien\";
         public static FormTN formTN = null;
        
         public static Cart dsGH = new Cart();
@@ -30,10 +35,11 @@ namespace GUI
             //  Application.Run(new FormCart());
             //using (Reporting.frmPrint frmPrint = new Reporting.frmPrint())
             //{
-            //    frmPrint.PrintBillThuNgan(21);
+            //    frmPrint.PrintBillThuNgan(8);
             //    frmPrint.ShowDialog();
             //}
-           Application.Run(new frmBieuDo());
+            Application.Run(frmLogin);
+            //Application.Run(new FormTN());
         }
     }
 }

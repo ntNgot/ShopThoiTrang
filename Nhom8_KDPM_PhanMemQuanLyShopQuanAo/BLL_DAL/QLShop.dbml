@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLSHOPTHOITRANG" Class="QLSHOPDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-P3L3PMG\THAOSQL;Initial Catalog=QLSHOPTHOITRANG;Persist Security Info=True;User ID=sa" SettingsObjectName="BLL_DAL.Properties.Settings" SettingsPropertyName="QLSHOPTHOITRANGConnectionString1" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLSHOPTHOITRANG" Class="QLShopDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-PSA46BF;Initial Catalog=QLSHOPTHOITRANG;Integrated Security=True" SettingsObjectName="BLL_DAL.Properties.Settings" SettingsPropertyName="QLSHOPTHOITRANGConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.BAOHANH" Member="BAOHANHs">
     <Type Name="BAOHANH">
       <Column Name="MAPHIEUBH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -105,7 +105,7 @@
       <Column Name="DIACHI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="GIOITINH" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
       <Column Name="NGAYSINH" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="SDT" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
       <Column Name="EMAIL" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Column Name="HINHANH" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="DIEMTICHLUY" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -115,8 +115,8 @@
   <Table Name="dbo.LOAISANPHAM" Member="LOAISANPHAMs">
     <Type Name="LOAISANPHAM">
       <Column Name="MALOAISANPHAM" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="TENLOAISANPHAM" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="HINHANH" Type="System.String" DbType="NChar(250)" CanBeNull="true" />
+      <Column Name="TENLOAISANPHAM" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hinhAnh" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Association Name="LOAISANPHAM_SANPHAM" Member="SANPHAMs" ThisKey="MALOAISANPHAM" OtherKey="MALOAISANPHAM" Type="SANPHAM" />
     </Type>
   </Table>
@@ -174,6 +174,45 @@
       <Column Name="TENSIZE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="MOTA" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Association Name="SIZE_CHITIETSANPHAM" Member="CHITIETSANPHAMs" ThisKey="MASIZE" OtherKey="MASIZE" Type="CHITIETSANPHAM" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_HoaDon" Member="vw_HoaDons">
+    <Type Name="vw_HoaDon">
+      <Column Name="MAHOADON" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NGAYTAO" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="THANHTIEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TENNHANVIEN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TENKHACHHANG" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MOTA" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_CTHD" Member="vw_CTHDs">
+    <Type Name="vw_CTHD">
+      <Column Name="TENSANPHAM" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DONGIA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SOLUONG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TENSIZE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TENMAU" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MAVACH" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="THANHTIEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MAHOADON" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MACHITIETSP" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_DSCTSP" Member="View_DSCTSPs">
+    <Type Name="View_DSCTSP">
+      <Column Name="TENMAU" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TENSANPHAM" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DONGIA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KHUYENMAI" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="HINHANH" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MASANPHAM" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TENSIZE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MOTA" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MAMAU" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MASIZE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MACHITIETSP" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MAVACH" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

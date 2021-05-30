@@ -8,7 +8,7 @@ namespace BLL_DAL
 {
     public class SanPham_BLLDAL
     {
-        QLSHOPDataContext dbContext = new QLSHOPDataContext();
+        QLShopDataContext dbContext = new QLShopDataContext();
        
         public IQueryable<SANPHAM> loadSanPham_ForLoai(int maLoai)
         {

@@ -33,6 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
     <Reference Include="BLL_DAL">
       <HintPath>..\BLL_DAL\bin\Debug\BLL_DAL.dll</HintPath>
     </Reference>
@@ -41,6 +50,7 @@
     <Reference Include="DevExpress.CodeParser.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v19.2" />
     <Reference Include="DevExpress.DataAccess.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dialogs.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.ExpressApp.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Office.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Pdf.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -54,6 +64,7 @@
     <Reference Include="DevExpress.Xpo.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraDialogs.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v19.2" />
     <Reference Include="DevExpress.Printing.v19.2.Core" />
     <Reference Include="DevExpress.XtraGauges.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -62,20 +73,24 @@
     <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v19.2.Extensions, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="IronBarCode, Version=2020.12.2.0, Culture=neutral, PublicKeyToken=b971bb3971bdf306, processorArchitecture=MSIL">
+      <HintPath>..\packages\BarCode.2020.12.2\lib\net40\IronBarCode.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
-    <Reference Include="System.Windows.Forms.DataVisualization" />
-    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -84,33 +99,67 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.6\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.6\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataSet1.cs">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DetailForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DetailForm.Designer.cs">
-      <DependentUpon>DetailForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormBillsSold.cs">
+    <Compile Include="Cashier\ChangePassword.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FormBillsSold.Designer.cs">
+    <Compile Include="Cashier\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cashier\ChonChiTietSP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cashier\ChonChiTietSP.Designer.cs">
+      <DependentUpon>ChonChiTietSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cashier\formCart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cashier\formCart.Designer.cs">
+      <DependentUpon>formCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cashier\FormListOfCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cashier\FormListOfCustomer.Designer.cs">
+      <DependentUpon>FormListOfCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cashier\formSanPham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cashier\formSanPham.Designer.cs">
+      <DependentUpon>formSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cashier\formTaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cashier\formTaiKhoan.Designer.cs">
+      <DependentUpon>formTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cashier\FormTaoKH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cashier\FormTaoKH.Designer.cs">
+      <DependentUpon>FormTaoKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cashier\formXacNhanGioHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cashier\formXacNhanGioHang.Designer.cs">
+      <DependentUpon>formXacNhanGioHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cashier\FormBillsSold.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cashier\FormBillsSold.Designer.cs">
       <DependentUpon>FormBillsSold.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormCart_XX.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormCart_XX.Designer.cs">
-      <DependentUpon>FormCart_XX.cs</DependentUpon>
     </Compile>
     <Compile Include="FormForget.cs">
       <SubType>Form</SubType>
@@ -118,22 +167,10 @@
     <Compile Include="FormForget.Designer.cs">
       <DependentUpon>FormForget.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormGioHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormGioHang.Designer.cs">
-      <DependentUpon>FormGioHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormHoaDon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormHoaDon.Designer.cs">
-      <DependentUpon>FormHoaDon.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormHome.cs">
+    <Compile Include="Cashier\FormHome.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FormHome.designer.cs">
+    <Compile Include="Cashier\FormHome.designer.cs">
       <DependentUpon>FormHome.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
@@ -142,55 +179,20 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="formOurProduct.cs">
+    <Compile Include="Cashier\formOurProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="formOurProduct.designer.cs">
+    <Compile Include="Cashier\formOurProduct.designer.cs">
       <DependentUpon>formOurProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormSanPham.cs">
+    <Compile Include="Cashier\FormTN.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormSanPham.Designer.cs">
-      <DependentUpon>FormSanPham.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormTaoThanhVienKH_XX.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormTaoThanhVienKH_XX.Designer.cs">
-      <DependentUpon>FormTaoThanhVienKH_XX.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormTaoThanhVienKhachHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormTaoThanhVienKhachHang.Designer.cs">
-      <DependentUpon>FormTaoThanhVienKhachHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormTN.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormTN.designer.cs">
+    <Compile Include="Cashier\FormTN.Designer.cs">
       <DependentUpon>FormTN.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmBieuDo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmBieuDo.Designer.cs">
-      <DependentUpon>frmBieuDo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frStatistical.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frStatistical.designer.cs">
-      <DependentUpon>frStatistical.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QLSHOPDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLSHOPDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Reporting\frmPrint.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,18 +205,6 @@
     <Compile Include="Reporting\ReportBill.Designer.cs">
       <DependentUpon>ReportBill.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reporting\ReportHoaDon.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reporting\ReportHoaDon.Designer.cs">
-      <DependentUpon>ReportHoaDon.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reporting\XtraReport1.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reporting\XtraReport1.Designer.cs">
-      <DependentUpon>XtraReport1.cs</DependentUpon>
-    </Compile>
     <Compile Include="RepositoryItemGraphicsEdit.cs" />
     <Compile Include="SetupControls.cs" />
     <Compile Include="WaitForm1.cs">
@@ -223,14 +213,32 @@
     <Compile Include="WaitForm1.Designer.cs">
       <DependentUpon>WaitForm1.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DetailForm.resx">
-      <DependentUpon>DetailForm.cs</DependentUpon>
+    <EmbeddedResource Include="Cashier\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormBillsSold.resx">
+    <EmbeddedResource Include="Cashier\ChonChiTietSP.resx">
+      <DependentUpon>ChonChiTietSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashier\formCart.resx">
+      <DependentUpon>formCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashier\FormListOfCustomer.resx">
+      <DependentUpon>FormListOfCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashier\formSanPham.resx">
+      <DependentUpon>formSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashier\formTaiKhoan.resx">
+      <DependentUpon>formTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashier\FormTaoKH.resx">
+      <DependentUpon>FormTaoKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashier\formXacNhanGioHang.resx">
+      <DependentUpon>formXacNhanGioHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashier\FormBillsSold.resx">
       <DependentUpon>FormBillsSold.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormCart_XX.resx">
-      <DependentUpon>FormCart_XX.cs</DependentUpon>
     </EmbeddedResource>
     <!--<EmbeddedResource Include="FluentDesignForm1.resx">
       <DependentUpon>FormThuNgan.cs</DependentUpon>
@@ -238,38 +246,17 @@
     <EmbeddedResource Include="FormForget.resx">
       <DependentUpon>FormForget.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormGioHang.resx">
-      <DependentUpon>FormGioHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormHoaDon.resx">
-      <DependentUpon>FormHoaDon.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormHome.resx">
+    <EmbeddedResource Include="Cashier\FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formOurProduct.resx">
+    <EmbeddedResource Include="Cashier\formOurProduct.resx">
       <DependentUpon>formOurProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormSanPham.resx">
-      <DependentUpon>FormSanPham.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormTaoThanhVienKH_XX.resx">
-      <DependentUpon>FormTaoThanhVienKH_XX.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormTaoThanhVienKhachHang.resx">
-      <DependentUpon>FormTaoThanhVienKhachHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormTN.resx">
+    <EmbeddedResource Include="Cashier\FormTN.resx">
       <DependentUpon>FormTN.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmBieuDo.resx">
-      <DependentUpon>frmBieuDo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frStatistical.resx">
-      <DependentUpon>frStatistical.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -288,27 +275,10 @@
     <EmbeddedResource Include="Reporting\ReportBill.resx">
       <DependentUpon>ReportBill.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reporting\ReportHoaDon.resx">
-      <DependentUpon>ReportHoaDon.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reporting\XtraReport1.resx">
-      <DependentUpon>XtraReport1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="WaitForm1.resx">
       <DependentUpon>WaitForm1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
-    <None Include="DataSet1.xsc">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet1.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DataSet1.xss">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\BLL_DAL.CHITIETHOADON.datasource" />
     <None Include="Properties\Settings.settings">
@@ -322,17 +292,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="QLSHOPDataSet.xsc">
-      <DependentUpon>QLSHOPDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QLSHOPDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLSHOPDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QLSHOPDataSet.xss">
-      <DependentUpon>QLSHOPDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Resources\buynow.svg" />
   </ItemGroup>
   <ItemGroup>
@@ -375,6 +334,7 @@
     <None Include="Resources\actions_home.svg" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
@@ -452,6 +412,7 @@
   <ItemGroup>
     <None Include="Resources\team.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

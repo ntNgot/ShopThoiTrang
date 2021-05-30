@@ -9,13 +9,25 @@ namespace BLL_DAL
     public class TaiKhoan
     {
 
-        QLSHOPDataContext dbContext = new QLSHOPDataContext();
+        QLShopDataContext dbContext = new QLShopDataContext();
         public TAIKHOANNHANVIEN FindTaiKhoan(string tenTaiKhoan, string matKhau)
         {
             try
             {
                 List<TAIKHOANNHANVIEN> db = dbContext.TAIKHOANNHANVIENs.ToList();
-                return dbContext.TAIKHOANNHANVIENs.Single(tk => tk.TENTAIKHOAN == tenTaiKhoan && tk.MATKHAU == matKhau);
+                return dbContext.TAIKHOANNHANVIENs.Single(tk => tk.TENTAIKHOAN.Equals(tenTaiKhoan) && tk.MATKHAU.Equals(matKhau));
+            }
+            catch
+            {
+                return null;
+            }
+        }
+        public TAIKHOANNHANVIEN FindTaiKhoan(int maTK)
+        {
+            try
+            {
+                List<TAIKHOANNHANVIEN> db = dbContext.TAIKHOANNHANVIENs.ToList();
+                return dbContext.TAIKHOANNHANVIENs.Single(tk => tk.MATAIKHOAN.Equals(maTK));
             }
             catch
             {
@@ -51,6 +63,21 @@ namespace BLL_DAL
         public NHANVIEN timNVTheoTK(int manv)
         {
             return dbContext.NHANVIENs.Where(t => t.MANHANVIEN == manv).FirstOrDefault();
+        }
+        public bool ThayDoiTaiKhoan(TAIKHOANNHANVIEN tk)
+        {
+            try
+            {
+                TAIKHOANNHANVIEN _tk = dbContext.TAIKHOANNHANVIENs.Single(t => t.MATAIKHOAN == tk.MATAIKHOAN);
+                _tk.TENTAIKHOAN = tk.TENTAIKHOAN;
+                _tk.MATKHAU = tk.MATKHAU;
+                dbContext.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

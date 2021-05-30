@@ -5,7 +5,6 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Collections.Generic;
 using BLL_DAL;
-using GUI.QLSHOPDataSetTableAdapters;
 
 namespace GUI.Reporting
 {
@@ -18,7 +17,6 @@ namespace GUI.Reporting
         }
         public void InitData(int maHoaDon)
         {
-            CHITIETHOADONTableAdapter db = new CHITIETHOADONTableAdapter();
             List<CHITIETHOADON> listChiTiet = cthd.getData_MaHoaDon(maHoaDon);
             pMaHoaDon.Value = maHoaDon;
             objectDataSource1.DataSource = listChiTiet;

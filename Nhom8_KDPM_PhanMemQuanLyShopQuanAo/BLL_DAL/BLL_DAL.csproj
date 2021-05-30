@@ -48,9 +48,11 @@
     <Reference Include="DevExpress.XtraGauges.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -68,10 +70,11 @@
     <Compile Include="HoaDonBLLDAL.cs" />
     <Compile Include="KhachHang_BLLDAL.cs" />
     <Compile Include="LoaiSanPham_BLLDAL.cs" />
-    <Compile Include="QLSHOP.designer.cs">
+    <Compile Include="NhanVien_BLLDAL.cs" />
+    <Compile Include="QLShop.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QLSHOP.dbml</DependentUpon>
+      <DependentUpon>QLShop.dbml</DependentUpon>
     </Compile>
     <Compile Include="SanPham_BLLDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -81,7 +84,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="TaiKhoan.cs" />
-    <Compile Include="ThongKe.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -91,10 +93,13 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="QLSHOP.dbml">
+    <None Include="QLShop.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>QLSHOP.designer.cs</LastGenOutput>
+      <LastGenOutput>QLShop.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </None>
+    <None Include="QLShop.dbml.layout">
+      <DependentUpon>QLShop.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -102,9 +107,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\licenses.licx" />
-    <None Include="QLSHOP.dbml.layout">
-      <DependentUpon>QLSHOP.dbml</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

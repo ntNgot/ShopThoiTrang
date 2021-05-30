@@ -8,9 +8,9 @@ namespace BLL_DAL
 {
     public class Common
     {
-        private static QLSHOPDataContext _Entities = new QLSHOPDataContext();
+        private static QLShopDataContext _Entities = new QLShopDataContext();
 
-        public static QLSHOPDataContext Entities
+        public static QLShopDataContext Entities
         {
             get { return Common._Entities; }
             set { Common._Entities = value; }

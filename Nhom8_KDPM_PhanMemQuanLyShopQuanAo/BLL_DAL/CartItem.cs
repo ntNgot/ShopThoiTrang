@@ -8,38 +8,20 @@ namespace BLL_DAL
 {
     public class CartItem
     {
-        public int iMaSanPham { get; set; }
-        public string iTenSanPham { get; set; }
+        public int MASANPHAM { get; set; }
+        public int MACHITIETSANPHAM { get; set; }
+        public string TENSANPHAM { get; set; }
+        public string HINHANH { get; set; }
         //public int imaSize { get; set; }
         //public string imauSac { get; set; }
-        public int iDonGia { get; set; }
-        public string iHinhAnh { get; set; }
-        public int iSoLuong { get; set; }
-        public int thanhTien
+        public int DONGIA { get; set; }
+        public int SOLUONG { get; set; }
+        public string MAVACH { get; set; }
+        public string TENMAU { get; set; }
+        public string TENSIZE { get; set; }
+        public int THANHTIEN
         {
-            get { return iSoLuong * iDonGia; }
-        }
-        //tạo giỏ hàng
-        QLSHOPDataContext db = new QLSHOPDataContext();
-        public CartItem()
-        {
-            this.iMaSanPham = 0;
-        }
-        public CartItem(int maSP)
-        {
-            SANPHAM sp = db.SANPHAMs.Single(n => n.MASANPHAM == maSP);
-
-            if (sp != null)
-            {
-                iMaSanPham = maSP;
-                iTenSanPham = sp.TENSANPHAM;
-                // imaSize = sp.SIZE.MASIZE;
-                // imauSac = sp.MAUSAC;
-                iDonGia = int.Parse(sp.DONGIA.ToString());
-                iHinhAnh = sp.HINHANH;
-                iSoLuong = 1;
-            }
-
+            get { return SOLUONG * DONGIA; }
         }
     }
 }
