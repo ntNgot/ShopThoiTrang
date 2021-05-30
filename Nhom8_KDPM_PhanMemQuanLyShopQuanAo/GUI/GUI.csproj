@@ -209,6 +209,7 @@
     </Compile>
     <Compile Include="RepositoryItemGraphicsEdit.cs" />
     <Compile Include="SetupControls.cs" />
+<<<<<<< HEAD
     <Compile Include="DataSet1.cs">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
@@ -280,6 +281,8 @@
     <Compile Include="V_NhapHang\UserControl_ALLPhieuNhap.Designer.cs">
       <DependentUpon>UserControl_ALLPhieuNhap.cs</DependentUpon>
     </Compile>
+=======
+>>>>>>> parent of b95c57c (Loc_Tuan)
     <Compile Include="WaitForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -354,6 +357,7 @@
     <EmbeddedResource Include="Reporting\ReportBill.resx">
       <DependentUpon>ReportBill.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Statistical\frmBieuDo.resx">
       <DependentUpon>frmBieuDo.cs</DependentUpon>
     </EmbeddedResource>
@@ -384,6 +388,8 @@
     <EmbeddedResource Include="V_NhapHang\UserControl_ALLPhieuNhap.resx">
       <DependentUpon>UserControl_ALLPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
+=======
+>>>>>>> parent of b95c57c (Loc_Tuan)
     <EmbeddedResource Include="WaitForm1.resx">
       <DependentUpon>WaitForm1.cs</DependentUpon>
     </EmbeddedResource>
@@ -402,17 +408,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="DataSet1.xsc">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet11.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataSet1.xss">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\buynow.svg" />

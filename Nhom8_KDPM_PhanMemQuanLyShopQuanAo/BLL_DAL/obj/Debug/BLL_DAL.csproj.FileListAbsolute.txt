@@ -740,6 +740,7 @@ D:\CongNghePhanMem\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\BLL_DAL\obj\
 D:\CongNghePhanMem\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\BLL_DAL\obj\Debug\BLL_DAL.csproj.CopyComplete
 D:\CongNghePhanMem\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\BLL_DAL\obj\Debug\BLL_DAL.dll
 D:\CongNghePhanMem\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\BLL_DAL\obj\Debug\BLL_DAL.pdb
+<<<<<<< HEAD
 C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\BLL_DAL\obj\Debug\BLL_DAL.csprojAssemblyReference.cache
 E:\Hoc\CNPM\GopDoAn\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\BLL_DAL\bin\Debug\BLL_DAL.dll.config
 E:\Hoc\CNPM\GopDoAn\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\BLL_DAL\bin\Debug\BLL_DAL.dll
@@ -844,3 +845,5 @@ E:\Hoc\CNPM\GopDoAn\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\BLL_DAL\obj
 E:\Hoc\CNPM\GopDoAn\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\BLL_DAL\obj\Debug\BLL_DAL.csproj.CopyComplete
 E:\Hoc\CNPM\GopDoAn\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\BLL_DAL\obj\Debug\BLL_DAL.dll
 E:\Hoc\CNPM\GopDoAn\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\BLL_DAL\obj\Debug\BLL_DAL.pdb
+=======
+>>>>>>> parent of b95c57c (Loc_Tuan)

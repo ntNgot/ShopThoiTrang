@@ -48,13 +48,19 @@ namespace BLL_DAL.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+<<<<<<< HEAD
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-P3L3PMG\\THAOSQL;Initial Catalog=QLSHOPTHOITRANG;Persist Secur" +
             "ity Info=True;User ID=sa;Password=sa")]
+=======
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-PSA46BF;Initial Catalog=QLSHOPTHOITRANG;Integrated Security=T" +
+            "rue")]
+>>>>>>> parent of b95c57c (Loc_Tuan)
         public string QLSHOPTHOITRANGConnectionString1 {
             get {
                 return ((string)(this["QLSHOPTHOITRANGConnectionString1"]));
             }
         }
+<<<<<<< HEAD
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -66,5 +72,7 @@ namespace BLL_DAL.Properties {
                 return ((string)(this["QLSHOPTHOITRANGConnectionString2"]));
             }
         }
+=======
+>>>>>>> parent of b95c57c (Loc_Tuan)
     }
 }

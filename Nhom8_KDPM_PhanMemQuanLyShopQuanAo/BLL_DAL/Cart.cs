@@ -39,49 +39,49 @@ namespace BLL_DAL
             return dsSP.Sum(t => t.THANHTIEN);
         }
 
-        public int Them(int iMaSP, int soLuong)
-        {
-            CartItem sanPham = dsSP.SingleOrDefault(n => n.MACHITIETSANPHAM == iMaSP);
-            if (sanPham == null)
-            {
-                CartItem sp = new CartItem(iMaSP);
-                sp.SOLUONG = soLuong;
-                if (sp == null)
-                    return -1;
-                dsSP.Add(sp);
-            }
-            else
-            {
-                sanPham.SOLUONG += soLuong;
-            }
-            return 1;
-        }
-        public void XoaItem(int iMaSP)
-        {
-            foreach (CartItem item in dsSP)
-            {
-                if (item.MACHITIETSANPHAM == iMaSP)
-                {
-                    dsSP.Remove(item);
-                    return;
-                }
-            }
+        ////thêm sản phẩm
+        //public int Them(int iMaSP, int soLuong)
+        //{
+        //    CartItem sanPham = dsSP.SingleOrDefault(n => n.iMaSanPham == iMaSP);
+        //    if (sanPham == null)
+        //    {
+        //        CartItem sp = new CartItem(iMaSP);
+        //        if (sp == null)
+        //            return -1;
+        //        dsSP.Add(sp);
+        //    }
+        //    else
+        //    {
+        //        sanPham.iSoLuong++;
+        //    }
+        //    return 1;
+        //}
+        //public void XoaItem(int iMaSP)
+        //{
+        //    foreach (CartItem item in dsSP)
+        //    {
+        //        if (item.iMaSanPham == iMaSP)
+        //        {
+        //            dsSP.Remove(item);
+        //            return;
+        //        }
+        //    }
 
-        }
-        public Boolean giamSL(int maSP)
-        {
-            CartItem cartItem = dsSP.Where(t => t.MACHITIETSANPHAM == maSP).FirstOrDefault();
-            if (cartItem.SOLUONG == 1)
-            {
-                return false;
-            }
-            else
-            {
-                cartItem.SOLUONG--;
-                return true;
-            }
-
-        }
-
+        //}
+        //public Boolean giamSL(int maSP)
+        //{
+        //    CartItem cartItem = dsSP.Where(t => t.iMaSanPham == maSP).FirstOrDefault();
+        //    if (cartItem.iSoLuong == 1)
+        //    {
+        //        return false;
+        //    }
+        //    else
+        //    {
+        //        cartItem.iSoLuong--;
+        //        return true;
+        //    } 
+                
+        //}
+        
     }
 }

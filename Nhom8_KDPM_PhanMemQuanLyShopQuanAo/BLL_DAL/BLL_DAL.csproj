@@ -70,9 +70,7 @@
     <Compile Include="HoaDonBLLDAL.cs" />
     <Compile Include="KhachHang_BLLDAL.cs" />
     <Compile Include="LoaiSanPham_BLLDAL.cs" />
-    <Compile Include="Mau_BLLDAL.cs" />
     <Compile Include="NhanVien_BLLDAL.cs" />
-    <Compile Include="PhieuNhap_BLLDAL.cs" />
     <Compile Include="QLShop.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -85,7 +83,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Size_BLLDAL.cs" />
     <Compile Include="TaiKhoan.cs" />
     <Compile Include="ThongKe.cs" />
   </ItemGroup>

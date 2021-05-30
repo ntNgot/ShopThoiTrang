@@ -30,17 +30,5 @@ namespace GUI.Reporting
             documentViewer1.DocumentSource = report;
             report.CreateDocument();
         }
-        public void PrintPhieuNhap(int maPN)
-        {
-            Reporting.ReportPhieuNhap report = new ReportPhieuNhap();
-            foreach (DevExpress.XtraReports.Parameters.Parameter p in report.Parameters)
-            {
-                p.Visible = false;
-            }
-            report.InitData(maPN);
-            documentViewer1.DocumentSource = report;
-            report.CreateDocument();
-
-        }
     }
 }

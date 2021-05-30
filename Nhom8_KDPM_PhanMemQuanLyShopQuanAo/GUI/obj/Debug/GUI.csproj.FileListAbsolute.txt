@@ -699,15 +699,24 @@ C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\bin\
 C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\bin\Debug\es\DevExpress.Diagram.v19.2.Core.resources.dll
 C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\bin\Debug\ja\DevExpress.Diagram.v19.2.Core.resources.dll
 C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\bin\Debug\ru\DevExpress.Diagram.v19.2.Core.resources.dll
+C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.DetailForm.resources
 C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.FormBillsSold.resources
+C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.FormCart_XX.resources
 C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.FormForget.resources
+C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.FormGioHang.resources
+C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.FormHoaDon.resources
 C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.FormHome.resources
 C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.FormLogin.resources
 C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.formOurProduct.resources
+C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.FormSanPham.resources
+C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.FormTaoThanhVienKH_XX.resources
+C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.FormTaoThanhVienKhachHang.resources
 C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.FormTN.resources
 C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.Properties.Resources.resources
 C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.Reporting.frmPrint.resources
 C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.Reporting.ReportBill.resources
+C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.Reporting.ReportHoaDon.resources
+C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\BLL_DAL.XtraReport1.resources
 C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.WaitForm1.resources
 C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
 C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.exe.licenses
@@ -958,6 +967,7 @@ D:\CongNghePhanMem\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debu
 D:\CongNghePhanMem\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.exe
 D:\CongNghePhanMem\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.pdb
 D:\CongNghePhanMem\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+<<<<<<< HEAD
 C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.Cashier.ChangePassword.resources
 C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.Cashier.ChonChiTietSP.resources
 C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.Cashier.formCart.resources
@@ -1245,3 +1255,5 @@ E:\Hoc\CNPM\GopDoAn\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Deb
 E:\Hoc\CNPM\GopDoAn\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.frStatistical.resources
 E:\Hoc\CNPM\GopDoAn\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.Reportt.resources
 E:\Hoc\CNPM\GopDoAn\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\GUI\obj\Debug\GUI.XtraForm1.resources
+=======
+>>>>>>> parent of b95c57c (Loc_Tuan)

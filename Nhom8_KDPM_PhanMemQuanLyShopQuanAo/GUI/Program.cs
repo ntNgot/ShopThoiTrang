@@ -14,13 +14,13 @@ namespace GUI
     {
         
         public static FormLogin frmLogin = null;
-        public static string linkURL_Image = @"C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\";
-        public static string linkURL_SanPham = @"C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\sanpham\";
-        public static string linkURL_LoaiSP = @"C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\loaisanpham\";
-        public static string linkURL_KhachHang = @"C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\KhachHang\";
-        public static string linkURL_NhanVien = @"C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\nhanvien\";
+        public static string linkURL_Image = @"D:\CongNghePhanMem\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\";
+        public static string linkURL_SanPham = @"D:\CongNghePhanMem\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\sanpham\";
+        public static string linkURL_LoaiSP = @"D:\CongNghePhanMem\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\loaisanpham\";
+        public static string linkURL_KhachHang = @"D:\CongNghePhanMem\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\KhachHang\";
+        public static string linkURL_NhanVien = @"D:\CongNghePhanMem\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\nhanvien\";
         public static FormTN formTN = null;
-        public static Cart dsPhieuNhap = new Cart();
+       
         public static Cart dsGH = new Cart();
         public static int soLuong = Program.dsGH.tongSoLuong();
         /// <summary>
@@ -31,14 +31,18 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-           
+            frmLogin = new FormLogin();
             //  Application.Run(new FormCart());
             //using (Reporting.frmPrint frmPrint = new Reporting.frmPrint())
             //{
             //    frmPrint.PrintBillThuNgan(8);
             //    frmPrint.ShowDialog();
             //}
+<<<<<<< HEAD
             Application.Run(new frmBieuDo());
+=======
+            Application.Run(frmLogin);
+>>>>>>> parent of b95c57c (Loc_Tuan)
             //Application.Run(new FormTN());
         }
     }
