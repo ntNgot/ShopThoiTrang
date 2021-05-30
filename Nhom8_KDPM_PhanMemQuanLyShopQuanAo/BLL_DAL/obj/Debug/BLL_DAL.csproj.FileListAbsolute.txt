@@ -740,3 +740,4 @@ D:\CongNghePhanMem\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\BLL_DAL\obj\
 D:\CongNghePhanMem\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\BLL_DAL\obj\Debug\BLL_DAL.csproj.CopyComplete
 D:\CongNghePhanMem\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\BLL_DAL\obj\Debug\BLL_DAL.dll
 D:\CongNghePhanMem\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\BLL_DAL\obj\Debug\BLL_DAL.pdb
+C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\BLL_DAL\obj\Debug\BLL_DAL.csprojAssemblyReference.cache

@@ -28,6 +28,14 @@ namespace BLL_DAL
         {
             return db.View_DSCTSPs.Where(t => t.MASANPHAM  == maSP).ToList();
         }
+        public CHITIETSANPHAM timCTSP_full(int maSP, string mau, string size)
+        {
+            return db.CHITIETSANPHAMs.Where(t => t.MASANPHAM == maSP && t.MAU.TENMAU == mau && t.SIZE.TENSIZE == size).FirstOrDefault();
+        }
+        public CHITIETSANPHAM timCTSP_THEOMACT(int maCT)
+        {
+            return db.CHITIETSANPHAMs.Where(t => t.MACHITIETSP == maCT).FirstOrDefault();
+        }
         public CHITIETSANPHAM timCTSP(int maCTSP)
         {
             try
@@ -72,6 +80,19 @@ namespace BLL_DAL
         public List<View_DSCTSP> loadDSCTSP(int maSP)
         {
             return db.View_DSCTSPs.Where(ct => ct.MASANPHAM == maSP).ToList();
+        }
+        public void themCTSP(CHITIETSANPHAM ctsp)
+        {
+            db.CHITIETSANPHAMs.InsertOnSubmit(ctsp);
+            db.SubmitChanges();
+        }
+        public List<SIZE> listSize()
+        {
+            return db.SIZEs.ToList();
+        }
+        public List<MAU> listMau()
+        {
+            return db.MAUs.ToList();
         }
     }
 }

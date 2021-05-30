@@ -207,6 +207,59 @@
     </Compile>
     <Compile Include="RepositoryItemGraphicsEdit.cs" />
     <Compile Include="SetupControls.cs" />
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <DependentUpon>DataSet1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="V_NhapHang\FormNhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V_NhapHang\FormNhapHang.Designer.cs">
+      <DependentUpon>FormNhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V_NhapHang\formNhapHang_main.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="V_NhapHang\formNhapHang_main.Designer.cs">
+      <DependentUpon>formNhapHang_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V_NhapHang\Menu_Ribbon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V_NhapHang\Menu_Ribbon.Designer.cs">
+      <DependentUpon>Menu_Ribbon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\ReportPhieuNhap.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporting\ReportPhieuNhap.Designer.cs">
+      <DependentUpon>ReportPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V_NhapHang\UsercontrolCart_PhieuNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="V_NhapHang\UsercontrolCart_PhieuNhap.Designer.cs">
+      <DependentUpon>UsercontrolCart_PhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V_NhapHang\UserControls_DSPhieuNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="V_NhapHang\UserControls_DSPhieuNhap.Designer.cs">
+      <DependentUpon>UserControls_DSPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V_NhapHang\UserControl_ALLPhieuNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="V_NhapHang\UserControl_ALLPhieuNhap.Designer.cs">
+      <DependentUpon>UserControl_ALLPhieuNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="WaitForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -275,6 +328,27 @@
     <EmbeddedResource Include="Reporting\ReportBill.resx">
       <DependentUpon>ReportBill.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="V_NhapHang\FormNhapHang.resx">
+      <DependentUpon>FormNhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V_NhapHang\formNhapHang_main.resx">
+      <DependentUpon>formNhapHang_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V_NhapHang\Menu_Ribbon.resx">
+      <DependentUpon>Menu_Ribbon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\ReportPhieuNhap.resx">
+      <DependentUpon>ReportPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V_NhapHang\UsercontrolCart_PhieuNhap.resx">
+      <DependentUpon>UsercontrolCart_PhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V_NhapHang\UserControls_DSPhieuNhap.resx">
+      <DependentUpon>UserControls_DSPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V_NhapHang\UserControl_ALLPhieuNhap.resx">
+      <DependentUpon>UserControl_ALLPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WaitForm1.resx">
       <DependentUpon>WaitForm1.cs</DependentUpon>
     </EmbeddedResource>
@@ -290,6 +364,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\buynow.svg" />

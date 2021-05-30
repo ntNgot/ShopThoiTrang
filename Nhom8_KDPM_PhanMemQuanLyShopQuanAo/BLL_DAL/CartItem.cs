@@ -23,5 +23,26 @@ namespace BLL_DAL
         {
             get { return SOLUONG * DONGIA; }
         }
+        public CartItem()
+        {
+            this.MACHITIETSANPHAM = 0;
+        }
+        public CartItem(int maCTSP)
+        {
+            ChiTietSanPham_BLL chiTietSanPham_BLL = new ChiTietSanPham_BLL();
+
+            CHITIETSANPHAM ctsp = chiTietSanPham_BLL.timCTSP_THEOMACT(maCTSP);
+            if (ctsp != null)
+            {
+                MACHITIETSANPHAM = maCTSP;
+                TENSANPHAM = ctsp.SANPHAM.TENSANPHAM;
+                TENSIZE = ctsp.SIZE.TENSIZE;
+                TENMAU = ctsp.MAU.TENMAU;
+                DONGIA = int.Parse((ctsp.SANPHAM.DONGIA * 0.7).ToString());
+                HINHANH = ctsp.HINHANH;
+                SOLUONG = 1;
+            }
+
+        }
     }
 }
