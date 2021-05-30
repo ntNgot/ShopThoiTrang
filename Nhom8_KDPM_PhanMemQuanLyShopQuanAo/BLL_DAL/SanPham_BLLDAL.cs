@@ -55,7 +55,6 @@ namespace BLL_DAL
             return dbContext.SANPHAMs.Where(t => t.TENSANPHAM.Contains(keywords)).ToList();
         }
 
-       
         public List<SANPHAM> sortDescPrice(List<SANPHAM> lstSP)
         {
             return lstSP.OrderByDescending(sp => sp.DONGIA).ToList();

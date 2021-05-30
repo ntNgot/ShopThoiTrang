@@ -68,10 +68,10 @@
     <Compile Include="HoaDonBLLDAL.cs" />
     <Compile Include="KhachHang_BLLDAL.cs" />
     <Compile Include="LoaiSanPham_BLLDAL.cs" />
-    <Compile Include="QLShop1.designer.cs">
+    <Compile Include="QLSHOP.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QLShop.dbml</DependentUpon>
+      <DependentUpon>QLSHOP.dbml</DependentUpon>
     </Compile>
     <Compile Include="SanPham_BLLDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -81,6 +81,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="TaiKhoan.cs" />
+    <Compile Include="ThongKe.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -90,13 +91,10 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="QLShop.dbml">
+    <None Include="QLSHOP.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>QLShop1.designer.cs</LastGenOutput>
+      <LastGenOutput>QLSHOP.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
-    </None>
-    <None Include="QLShop.dbml.layout">
-      <DependentUpon>QLShop.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -104,6 +102,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\licenses.licx" />
+    <None Include="QLSHOP.dbml.layout">
+      <DependentUpon>QLSHOP.dbml</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

@@ -133,7 +133,7 @@ namespace GUI
 
         private void repositoryItemButtonEdit1_Click(object sender, EventArgs e)
         {
-            int ma =  (gridView1.GetFocusedRow() as CartItem).iMaChiTietSP;
+            int ma =  (gridView1.GetFocusedRow() as CartItem).iMaSanPham;
             if (MessageBox.Show("Bạn có chắc muốn xóa{(gridView1.GetFocusedRow()as CartItem).iTenSanPham}?","Message",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
             {
                 MessageBox.Show("Đã xóa khỏi giỏ hàng!");
@@ -171,7 +171,7 @@ namespace GUI
 
         private void repositoryItemButtonEditGIAMSL_Click(object sender, EventArgs e)
         {
-            int ma = (gridView1.GetFocusedRow() as CartItem).iMaChiTietSP;
+            int ma = (gridView1.GetFocusedRow() as CartItem).iMaSanPham;
 
             Boolean kq = Program.dsGH.giamSL(ma);
             if (kq == true)

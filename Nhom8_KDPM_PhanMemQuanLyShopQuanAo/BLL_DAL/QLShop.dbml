@@ -1,11 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLSHOPTHOITRANG" Class="QLSHOPDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=&quot;. \ sqlexpress&quot;;Initial Catalog=QLSHOPTHOITRANG;Integrated Security=True" SettingsObjectName="BLL_DAL.Properties.Settings" SettingsPropertyName="QLSHOPTHOITRANGConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-P3L3PMG\THAOSQL;Initial Catalog=QLSHOPTHOITRANG;Persist Security Info=True;User ID=sa" SettingsObjectName="BLL_DAL.Properties.Settings" SettingsPropertyName="QLSHOPTHOITRANGConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.BAOHANH" Member="BAOHANHs">
     <Type Name="BAOHANH">
       <Column Name="MAPHIEUBH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="MOTA" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="NGAYLAPBH" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Association Name="BAOHANH_CHITIETBAOHANH" Member="CHITIETBAOHANHs" ThisKey="MAPHIEUBH" OtherKey="MAPHIEUBH" Type="CHITIETBAOHANH" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TAIKHOANNHANVIEN" Member="TAIKHOANNHANVIENs">
+    <Type Name="TAIKHOANNHANVIEN">
+      <Column Name="MATAIKHOAN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NGAYTAO" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TENTAIKHOAN" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MATKHAU" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TRANGTHAI" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MANHANVIEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="NHANVIEN_TAIKHOANNHANVIEN" Member="NHANVIEN" ThisKey="MANHANVIEN" OtherKey="MANHANVIEN" Type="NHANVIEN" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.CHITIETBAOHANH" Member="CHITIETBAOHANHs">
@@ -105,7 +116,7 @@
     <Type Name="LOAISANPHAM">
       <Column Name="MALOAISANPHAM" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="TENLOAISANPHAM" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="HINHANH" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HINHANH" Type="System.String" DbType="NChar(250)" CanBeNull="true" />
       <Association Name="LOAISANPHAM_SANPHAM" Member="SANPHAMs" ThisKey="MALOAISANPHAM" OtherKey="MALOAISANPHAM" Type="SANPHAM" />
     </Type>
   </Table>
@@ -131,8 +142,8 @@
       <Column Name="TINHTRANG" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
       <Column Name="EMAIL" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Column Name="CHUCVU" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Association Name="NHANVIEN_HOADON" Member="HOADONs" ThisKey="MANHANVIEN" OtherKey="MANHANVIEN" Type="HOADON" />
       <Association Name="NHANVIEN_TAIKHOANNHANVIEN" Member="TAIKHOANNHANVIENs" ThisKey="MANHANVIEN" OtherKey="MANHANVIEN" Type="TAIKHOANNHANVIEN" />
+      <Association Name="NHANVIEN_HOADON" Member="HOADONs" ThisKey="MANHANVIEN" OtherKey="MANHANVIEN" Type="HOADON" />
     </Type>
   </Table>
   <Table Name="dbo.PHIEUNHAP" Member="PHIEUNHAPs">
@@ -163,17 +174,6 @@
       <Column Name="TENSIZE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="MOTA" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Association Name="SIZE_CHITIETSANPHAM" Member="CHITIETSANPHAMs" ThisKey="MASIZE" OtherKey="MASIZE" Type="CHITIETSANPHAM" />
-    </Type>
-  </Table>
-  <Table Name="dbo.TAIKHOANNHANVIEN" Member="TAIKHOANNHANVIENs">
-    <Type Name="TAIKHOANNHANVIEN">
-      <Column Name="MATAIKHOAN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="NGAYTAO" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="TENTAIKHOAN" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Column Name="MATKHAU" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Column Name="TRANGTHAI" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="MANHANVIEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="NHANVIEN_TAIKHOANNHANVIEN" Member="NHANVIEN" ThisKey="MANHANVIEN" OtherKey="MANHANVIEN" Type="NHANVIEN" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

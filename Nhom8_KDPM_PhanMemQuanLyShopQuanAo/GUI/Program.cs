@@ -12,10 +12,10 @@ namespace GUI
     static class Program
     {
         public static FormLogin frmLogin = null;
-        public static string linkURL_SanPham = "C:\\Users\\Admin\\Desktop\\ShopThoiTrang\\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\\Image\\sanpham\\";
-        public static string linkURL_LoaiSP = "C:\\Users\\Admin\\Desktop\\ShopThoiTrang\\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\\Image\\loaisanpham\\";
+        public static string linkURL_SanPham = "E:\\Hoc\\CNPM\\doan\\ShopThoiTrang\\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\\Image\\sanpham\\";
+        public static string linkURL_LoaiSP = "E:\\Hoc\\CNPM\\doan\\ShopThoiTrang\\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\\Image\\loaisanpham\\";
         public static FormTN formTN = null;
-        public static Cart dsPhieuNhap = new Cart();
+       
         public static Cart dsGH = new Cart();
         public static int soLuong = Program.dsGH.tongSoLuong();
         /// <summary>
@@ -33,7 +33,7 @@ namespace GUI
             //    frmPrint.PrintBillThuNgan(21);
             //    frmPrint.ShowDialog();
             //}
-           Application.Run(new FormNhapHang());
+           Application.Run(new frmBieuDo());
         }
     }
 }

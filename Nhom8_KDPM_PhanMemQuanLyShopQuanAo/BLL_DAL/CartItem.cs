@@ -8,10 +8,10 @@ namespace BLL_DAL
 {
     public class CartItem
     {
-        public int iMaChiTietSP { get; set; }
+        public int iMaSanPham { get; set; }
         public string iTenSanPham { get; set; }
-        public string iSize { get; set; }
-        public string imausac { get; set; }
+        //public int imaSize { get; set; }
+        //public string imauSac { get; set; }
         public int iDonGia { get; set; }
         public string iHinhAnh { get; set; }
         public int iSoLuong { get; set; }
@@ -23,21 +23,20 @@ namespace BLL_DAL
         QLSHOPDataContext db = new QLSHOPDataContext();
         public CartItem()
         {
-            this.iMaChiTietSP = 0;
+            this.iMaSanPham = 0;
         }
-        public CartItem(int maCTSP)
+        public CartItem(int maSP)
         {
-            ChiTietSanPham_BLL chiTietSanPham_BLL = new ChiTietSanPham_BLL();
+            SANPHAM sp = db.SANPHAMs.Single(n => n.MASANPHAM == maSP);
 
-            CHITIETSANPHAM ctsp = chiTietSanPham_BLL.timCTSP_THEOMACT(maCTSP);
-            if (ctsp != null)
+            if (sp != null)
             {
-                iMaChiTietSP = maCTSP;
-                iTenSanPham = ctsp.SANPHAM.TENSANPHAM;
-                iSize = ctsp.SIZE.TENSIZE;
-                imausac = ctsp.MAU.TENMAU;
-                iDonGia = int.Parse(ctsp.SANPHAM.DONGIA.ToString());
-                iHinhAnh = ctsp.HINHANH;
+                iMaSanPham = maSP;
+                iTenSanPham = sp.TENSANPHAM;
+                // imaSize = sp.SIZE.MASIZE;
+                // imauSac = sp.MAUSAC;
+                iDonGia = int.Parse(sp.DONGIA.ToString());
+                iHinhAnh = sp.HINHANH;
                 iSoLuong = 1;
             }
 

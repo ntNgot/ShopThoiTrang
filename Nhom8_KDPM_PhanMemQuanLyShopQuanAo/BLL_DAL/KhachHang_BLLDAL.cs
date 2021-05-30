@@ -116,7 +116,7 @@ namespace BLL_DAL
                     ct.THANHTIEN = sp.thanhTien;
                 }
                 ct.MAHOADON = hd.MAHOADON;
-                ct.MACHITIETSP = sp.iMaChiTietSP;
+                ct.MACHITIETSP = sp.iMaSanPham;
                 ct.DONGIABAN = int.Parse(sp.iDonGia.ToString());
                 ct.SOLUONG = sp.iSoLuong;
                 db.CHITIETHOADONs.InsertOnSubmit(ct);
