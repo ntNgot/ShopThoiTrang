@@ -38,7 +38,7 @@ namespace GUI
             //    frmPrint.PrintBillThuNgan(8);
             //    frmPrint.ShowDialog();
             //}
-            Application.Run(new FormNhapHang());
+            Application.Run(new frmBieuDo());
             //Application.Run(new FormTN());
         }
     }

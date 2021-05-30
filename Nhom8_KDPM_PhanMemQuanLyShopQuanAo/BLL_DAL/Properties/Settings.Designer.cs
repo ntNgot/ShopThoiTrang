@@ -12,7 +12,7 @@ namespace BLL_DAL.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.9.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -26,7 +26,8 @@ namespace BLL_DAL.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\sqlexpress;Initial Catalog=QLSHOP;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-P3L3PMG\\THAOSQL;Initial Catalog=QLSHOPTHOITRANG;Persist Secur" +
+            "ity Info=True;User ID=sa;Password=sa")]
         public string QLSHOPConnectionString {
             get {
                 return ((string)(this["QLSHOPConnectionString"]));
@@ -36,8 +37,8 @@ namespace BLL_DAL.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=\". \\ sqlexpress\";Initial Catalog=QLSHOPTHOITRANG;Integrated Security=" +
-            "True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-P3L3PMG\\THAOSQL;Initial Catalog=QLSHOPTHOITRANG;Persist Secur" +
+            "ity Info=True;User ID=sa;Password=sa")]
         public string QLSHOPTHOITRANGConnectionString {
             get {
                 return ((string)(this["QLSHOPTHOITRANGConnectionString"]));
@@ -47,8 +48,8 @@ namespace BLL_DAL.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=\". \\ sqlexpress\";Initial Catalog=QLSHOPTHOITRANG;Integrated Security=" +
-            "True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-P3L3PMG\\THAOSQL;Initial Catalog=QLSHOPTHOITRANG;Persist Secur" +
+            "ity Info=True;User ID=sa;Password=sa")]
         public string QLSHOPTHOITRANGConnectionString1 {
             get {
                 return ((string)(this["QLSHOPTHOITRANGConnectionString1"]));
@@ -58,8 +59,8 @@ namespace BLL_DAL.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\sqlexpress;Initial Catalog=QLSHOPTHOITRANG;Integrated Security=True" +
-            "")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-P3L3PMG\\THAOSQL;Initial Catalog=QLSHOPTHOITRANG;Persist Secur" +
+            "ity Info=True;User ID=sa;Password=sa")]
         public string QLSHOPTHOITRANGConnectionString2 {
             get {
                 return ((string)(this["QLSHOPTHOITRANGConnectionString2"]));
