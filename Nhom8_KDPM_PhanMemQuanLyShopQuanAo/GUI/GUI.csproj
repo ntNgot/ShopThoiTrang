@@ -93,12 +93,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DetailForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DetailForm.Designer.cs">
-      <DependentUpon>DetailForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Menu_Ribbon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,83 +116,17 @@
     <Compile Include="V_NhapHang\FormNhapHang.Designer.cs">
       <DependentUpon>FormNhapHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormBillsSold.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="FormBillsSold.Designer.cs">
-      <DependentUpon>FormBillsSold.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormCart_XX.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormCart_XX.Designer.cs">
-      <DependentUpon>FormCart_XX.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormForget.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormForget.Designer.cs">
-      <DependentUpon>FormForget.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormGioHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormGioHang.Designer.cs">
-      <DependentUpon>FormGioHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormHoaDon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormHoaDon.Designer.cs">
-      <DependentUpon>FormHoaDon.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormHome.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="FormHome.designer.cs">
-      <DependentUpon>FormHome.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormLogin.Designer.cs">
-      <DependentUpon>FormLogin.cs</DependentUpon>
-    </Compile>
     <Compile Include="V_NhapHang\formNhapHang_main.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="V_NhapHang\formNhapHang_main.Designer.cs">
       <DependentUpon>formNhapHang_main.cs</DependentUpon>
     </Compile>
-    <Compile Include="formOurProduct.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="formOurProduct.designer.cs">
-      <DependentUpon>formOurProduct.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormSanPham.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormSanPham.Designer.cs">
-      <DependentUpon>FormSanPham.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormTaoThanhVienKH_XX.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormTaoThanhVienKH_XX.Designer.cs">
       <DependentUpon>FormTaoThanhVienKH_XX.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormTaoThanhVienKhachHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormTaoThanhVienKhachHang.Designer.cs">
-      <DependentUpon>FormTaoThanhVienKhachHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormTN.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormTN.Designer.cs">
-      <DependentUpon>FormTN.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -257,9 +185,6 @@
     <Compile Include="WaitForm1.Designer.cs">
       <DependentUpon>WaitForm1.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DetailForm.resx">
-      <DependentUpon>DetailForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Menu_Ribbon.resx">
       <DependentUpon>Menu_Ribbon.cs</DependentUpon>
     </EmbeddedResource>
@@ -269,47 +194,14 @@
     <EmbeddedResource Include="V_NhapHang\FormNhapHang.resx">
       <DependentUpon>FormNhapHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormBillsSold.resx">
-      <DependentUpon>FormBillsSold.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormCart_XX.resx">
-      <DependentUpon>FormCart_XX.cs</DependentUpon>
-    </EmbeddedResource>
     <!--<EmbeddedResource Include="FluentDesignForm1.resx">
       <DependentUpon>FormThuNgan.cs</DependentUpon>
     </EmbeddedResource>-->
-    <EmbeddedResource Include="FormForget.resx">
-      <DependentUpon>FormForget.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormGioHang.resx">
-      <DependentUpon>FormGioHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormHoaDon.resx">
-      <DependentUpon>FormHoaDon.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormHome.resx">
-      <DependentUpon>FormHome.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormLogin.resx">
-      <DependentUpon>FormLogin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="V_NhapHang\formNhapHang_main.resx">
       <DependentUpon>formNhapHang_main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formOurProduct.resx">
-      <DependentUpon>formOurProduct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormSanPham.resx">
-      <DependentUpon>FormSanPham.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormTaoThanhVienKH_XX.resx">
       <DependentUpon>FormTaoThanhVienKH_XX.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormTaoThanhVienKhachHang.resx">
-      <DependentUpon>FormTaoThanhVienKhachHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormTN.resx">
-      <DependentUpon>FormTN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

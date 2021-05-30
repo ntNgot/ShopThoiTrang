@@ -381,6 +381,7 @@ namespace GUI
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.CHITIETHOADONTableAdapter = null;
             this.tableAdapterManager.KHACHHANGTableAdapter = this.kHACHHANGTableAdapter;
+            this.tableAdapterManager.PHIEUNHAPTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = GUI.QLSHOPDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // txtDiaChi
