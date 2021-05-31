@@ -7,7 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-
+using GUI.V_BaoHanh;
 namespace GUI
 {
     static class Program
@@ -18,8 +18,9 @@ namespace GUI
         public static string linkURL_SanPham = @"C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\sanpham\";
         public static string linkURL_LoaiSP = @"C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\loaisanpham\";
         public static string linkURL_KhachHang = @"C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\KhachHang\";
-        public static string linkURL_NhanVien = @"C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\nhanvien\";
-        public static FormTN formTN = null;
+        public static string linkURL_NhanVien = @"C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\nhanvien\"; 
+        public static FormTN formTN =null;
+        public static List<CHITIETHOADON> dsBaoHanh = new List<CHITIETHOADON>();
         public static Cart dsPhieuNhap = new Cart();
         public static Cart dsGH = new Cart();
         public static int soLuong = Program.dsGH.tongSoLuong();
@@ -31,15 +32,8 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-           
-            //  Application.Run(new FormCart());
-            //using (Reporting.frmPrint frmPrint = new Reporting.frmPrint())
-            //{
-            //    frmPrint.PrintBillThuNgan(8);
-            //    frmPrint.ShowDialog();
-            //}
-            Application.Run(new frmBieuDo());
-            //Application.Run(new FormTN());
+            Application.Run(new FormLogin());
+
         }
     }
 }

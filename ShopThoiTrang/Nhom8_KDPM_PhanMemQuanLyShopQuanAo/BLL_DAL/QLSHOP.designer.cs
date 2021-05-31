@@ -30,12 +30,12 @@ namespace BLL_DAL
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertBAOHANH(BAOHANH instance);
-    partial void UpdateBAOHANH(BAOHANH instance);
-    partial void DeleteBAOHANH(BAOHANH instance);
     partial void InsertTAIKHOANNHANVIEN(TAIKHOANNHANVIEN instance);
     partial void UpdateTAIKHOANNHANVIEN(TAIKHOANNHANVIEN instance);
     partial void DeleteTAIKHOANNHANVIEN(TAIKHOANNHANVIEN instance);
+    partial void InsertBAOHANH(BAOHANH instance);
+    partial void UpdateBAOHANH(BAOHANH instance);
+    partial void DeleteBAOHANH(BAOHANH instance);
     partial void InsertCHITIETBAOHANH(CHITIETBAOHANH instance);
     partial void UpdateCHITIETBAOHANH(CHITIETBAOHANH instance);
     partial void DeleteCHITIETBAOHANH(CHITIETBAOHANH instance);
@@ -107,19 +107,19 @@ namespace BLL_DAL
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<BAOHANH> BAOHANHs
-		{
-			get
-			{
-				return this.GetTable<BAOHANH>();
-			}
-		}
-		
 		public System.Data.Linq.Table<TAIKHOANNHANVIEN> TAIKHOANNHANVIENs
 		{
 			get
 			{
 				return this.GetTable<TAIKHOANNHANVIEN>();
+			}
+		}
+		
+		public System.Data.Linq.Table<BAOHANH> BAOHANHs
+		{
+			get
+			{
+				return this.GetTable<BAOHANH>();
 			}
 		}
 		
@@ -257,144 +257,6 @@ namespace BLL_DAL
 			{
 				return this.GetTable<vw_CTHD>();
 			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.BAOHANH")]
-	public partial class BAOHANH : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _MAPHIEUBH;
-		
-		private string _MOTA;
-		
-		private System.Nullable<System.DateTime> _NGAYLAPBH;
-		
-		private EntitySet<CHITIETBAOHANH> _CHITIETBAOHANHs;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnMAPHIEUBHChanging(int value);
-    partial void OnMAPHIEUBHChanged();
-    partial void OnMOTAChanging(string value);
-    partial void OnMOTAChanged();
-    partial void OnNGAYLAPBHChanging(System.Nullable<System.DateTime> value);
-    partial void OnNGAYLAPBHChanged();
-    #endregion
-		
-		public BAOHANH()
-		{
-			this._CHITIETBAOHANHs = new EntitySet<CHITIETBAOHANH>(new Action<CHITIETBAOHANH>(this.attach_CHITIETBAOHANHs), new Action<CHITIETBAOHANH>(this.detach_CHITIETBAOHANHs));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAPHIEUBH", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int MAPHIEUBH
-		{
-			get
-			{
-				return this._MAPHIEUBH;
-			}
-			set
-			{
-				if ((this._MAPHIEUBH != value))
-				{
-					this.OnMAPHIEUBHChanging(value);
-					this.SendPropertyChanging();
-					this._MAPHIEUBH = value;
-					this.SendPropertyChanged("MAPHIEUBH");
-					this.OnMAPHIEUBHChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MOTA", DbType="NVarChar(MAX)")]
-		public string MOTA
-		{
-			get
-			{
-				return this._MOTA;
-			}
-			set
-			{
-				if ((this._MOTA != value))
-				{
-					this.OnMOTAChanging(value);
-					this.SendPropertyChanging();
-					this._MOTA = value;
-					this.SendPropertyChanged("MOTA");
-					this.OnMOTAChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NGAYLAPBH", DbType="Date")]
-		public System.Nullable<System.DateTime> NGAYLAPBH
-		{
-			get
-			{
-				return this._NGAYLAPBH;
-			}
-			set
-			{
-				if ((this._NGAYLAPBH != value))
-				{
-					this.OnNGAYLAPBHChanging(value);
-					this.SendPropertyChanging();
-					this._NGAYLAPBH = value;
-					this.SendPropertyChanged("NGAYLAPBH");
-					this.OnNGAYLAPBHChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="BAOHANH_CHITIETBAOHANH", Storage="_CHITIETBAOHANHs", ThisKey="MAPHIEUBH", OtherKey="MAPHIEUBH")]
-		public EntitySet<CHITIETBAOHANH> CHITIETBAOHANHs
-		{
-			get
-			{
-				return this._CHITIETBAOHANHs;
-			}
-			set
-			{
-				this._CHITIETBAOHANHs.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_CHITIETBAOHANHs(CHITIETBAOHANH entity)
-		{
-			this.SendPropertyChanging();
-			entity.BAOHANH = this;
-		}
-		
-		private void detach_CHITIETBAOHANHs(CHITIETBAOHANH entity)
-		{
-			this.SendPropertyChanging();
-			entity.BAOHANH = null;
 		}
 	}
 	
@@ -618,6 +480,168 @@ namespace BLL_DAL
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.BAOHANH")]
+	public partial class BAOHANH : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _MAPHIEUBH;
+		
+		private string _MOTA;
+		
+		private System.Nullable<System.DateTime> _NGAYLAPBH;
+		
+		private string _TRANGTHAI;
+		
+		private EntitySet<CHITIETBAOHANH> _CHITIETBAOHANHs;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnMAPHIEUBHChanging(int value);
+    partial void OnMAPHIEUBHChanged();
+    partial void OnMOTAChanging(string value);
+    partial void OnMOTAChanged();
+    partial void OnNGAYLAPBHChanging(System.Nullable<System.DateTime> value);
+    partial void OnNGAYLAPBHChanged();
+    partial void OnTRANGTHAIChanging(string value);
+    partial void OnTRANGTHAIChanged();
+    #endregion
+		
+		public BAOHANH()
+		{
+			this._CHITIETBAOHANHs = new EntitySet<CHITIETBAOHANH>(new Action<CHITIETBAOHANH>(this.attach_CHITIETBAOHANHs), new Action<CHITIETBAOHANH>(this.detach_CHITIETBAOHANHs));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAPHIEUBH", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int MAPHIEUBH
+		{
+			get
+			{
+				return this._MAPHIEUBH;
+			}
+			set
+			{
+				if ((this._MAPHIEUBH != value))
+				{
+					this.OnMAPHIEUBHChanging(value);
+					this.SendPropertyChanging();
+					this._MAPHIEUBH = value;
+					this.SendPropertyChanged("MAPHIEUBH");
+					this.OnMAPHIEUBHChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MOTA", DbType="NVarChar(MAX)")]
+		public string MOTA
+		{
+			get
+			{
+				return this._MOTA;
+			}
+			set
+			{
+				if ((this._MOTA != value))
+				{
+					this.OnMOTAChanging(value);
+					this.SendPropertyChanging();
+					this._MOTA = value;
+					this.SendPropertyChanged("MOTA");
+					this.OnMOTAChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NGAYLAPBH", DbType="Date")]
+		public System.Nullable<System.DateTime> NGAYLAPBH
+		{
+			get
+			{
+				return this._NGAYLAPBH;
+			}
+			set
+			{
+				if ((this._NGAYLAPBH != value))
+				{
+					this.OnNGAYLAPBHChanging(value);
+					this.SendPropertyChanging();
+					this._NGAYLAPBH = value;
+					this.SendPropertyChanged("NGAYLAPBH");
+					this.OnNGAYLAPBHChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TRANGTHAI", DbType="NVarChar(MAX)")]
+		public string TRANGTHAI
+		{
+			get
+			{
+				return this._TRANGTHAI;
+			}
+			set
+			{
+				if ((this._TRANGTHAI != value))
+				{
+					this.OnTRANGTHAIChanging(value);
+					this.SendPropertyChanging();
+					this._TRANGTHAI = value;
+					this.SendPropertyChanged("TRANGTHAI");
+					this.OnTRANGTHAIChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="BAOHANH_CHITIETBAOHANH", Storage="_CHITIETBAOHANHs", ThisKey="MAPHIEUBH", OtherKey="MAPHIEUBH")]
+		public EntitySet<CHITIETBAOHANH> CHITIETBAOHANHs
+		{
+			get
+			{
+				return this._CHITIETBAOHANHs;
+			}
+			set
+			{
+				this._CHITIETBAOHANHs.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_CHITIETBAOHANHs(CHITIETBAOHANH entity)
+		{
+			this.SendPropertyChanging();
+			entity.BAOHANH = this;
+		}
+		
+		private void detach_CHITIETBAOHANHs(CHITIETBAOHANH entity)
+		{
+			this.SendPropertyChanging();
+			entity.BAOHANH = null;
 		}
 	}
 	

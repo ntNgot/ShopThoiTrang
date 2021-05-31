@@ -26,6 +26,22 @@ namespace BLL_DAL
         //    }).ToList();
         //    return list;
         //}
+        public void themSP(SANPHAM sp)
+        {
+            dbContext.SANPHAMs.InsertOnSubmit(sp);
+            dbContext.SubmitChanges();
+        }
+        public void suaTTSP(SANPHAM sp)
+        {
+            SANPHAM s = dbContext.SANPHAMs.Where(t => t.MASANPHAM == sp.MASANPHAM).FirstOrDefault();
+
+            s.DONGIA = sp.DONGIA;
+            s.KHUYENMAI = sp.KHUYENMAI;
+            s.TENSANPHAM = sp.TENSANPHAM;
+            s.MOTA = sp.MOTA;
+
+            dbContext.SubmitChanges();
+        }
         public SANPHAM detailSanpham(int maSP)
         {
             return dbContext.SANPHAMs.FirstOrDefault(sp => sp.MASANPHAM == maSP);
@@ -44,6 +60,8 @@ namespace BLL_DAL
         //    if (sp.SOLUONGTON == cartItem.iSoLuong )
         //        return "Số lượng tồn không cung cấp đủ";
         //    return "duyệt";
+        
+
         //}
         public IQueryable<SANPHAM> load_DSSP()
         {

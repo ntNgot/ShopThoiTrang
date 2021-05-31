@@ -32,7 +32,7 @@ namespace GUI
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTN));
             this.container = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
-            this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
+            this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager();
             this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
             this.barButtonItemCart = new DevExpress.XtraBars.BarButtonItem();
             this.itemNav = new DevExpress.XtraBars.BarStaticItem();

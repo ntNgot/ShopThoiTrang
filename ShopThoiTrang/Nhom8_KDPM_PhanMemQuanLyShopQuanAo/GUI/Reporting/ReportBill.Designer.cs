@@ -130,6 +130,7 @@ namespace GUI.Reporting
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrTable1});
+            this.Detail.HeightF = 26.3889F;
             this.Detail.Name = "Detail";
             // 
             // xrTable1

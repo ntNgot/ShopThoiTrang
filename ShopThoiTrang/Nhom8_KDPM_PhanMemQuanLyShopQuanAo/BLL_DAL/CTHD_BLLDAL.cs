@@ -63,5 +63,9 @@ namespace BLL_DAL
                 return false;
             }
         }
+        public CHITIETHOADON CTHD(int maCTHD)
+        {
+            return db.CHITIETHOADONs.Where(t => t.MACHITIETHD == maCTHD).FirstOrDefault();
+        }
     }
 }

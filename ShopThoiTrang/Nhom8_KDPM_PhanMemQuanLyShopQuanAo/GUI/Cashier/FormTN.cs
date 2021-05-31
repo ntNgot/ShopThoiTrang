@@ -462,7 +462,7 @@ namespace GUI
 
         private void FormTN_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Program.frmLogin.Show();
+            
         }
 
         private void accordionControlElementLogOut_Click(object sender, EventArgs e)

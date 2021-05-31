@@ -42,5 +42,22 @@ namespace GUI.Reporting
             report.CreateDocument();
 
         }
+        public void PrintPhieuBaoHanh(int MaBaoHanh)
+        {
+            Reporting.ReportPhieuBaoHanh report = new ReportPhieuBaoHanh();
+            foreach (DevExpress.XtraReports.Parameters.Parameter p in report.Parameters)
+            {
+                p.Visible = false;
+            }
+            report.InitData(MaBaoHanh);
+            documentViewer1.DocumentSource = report;
+            report.CreateDocument();
+
+        }
+
+        private void frmPrint_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

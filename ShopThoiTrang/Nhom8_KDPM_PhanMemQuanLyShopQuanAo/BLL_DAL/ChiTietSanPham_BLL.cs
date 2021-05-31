@@ -9,6 +9,12 @@ namespace BLL_DAL
    public class ChiTietSanPham_BLL
     {
         QLShopDataContext db = new QLShopDataContext();
+        public void suaCTSP(CHITIETSANPHAM ct)
+        {
+            CHITIETSANPHAM s = db.CHITIETSANPHAMs.Where(t => t.MACHITIETSP == ct.MACHITIETSP).FirstOrDefault();
+            s.SOLUONGTON = ct.SOLUONGTON;
+            db.SubmitChanges();
+        }
         public List<CHITIETSANPHAM> timDSCT(int maSP)
         {
             return db.CHITIETSANPHAMs.Where(t => t.MASANPHAM == maSP).ToList();

@@ -62,11 +62,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaoHanh_BLLDAL.cs" />
     <Compile Include="Cart.cs" />
     <Compile Include="CartItem.cs" />
     <Compile Include="ChiTietSanPham_BLL.cs" />
     <Compile Include="Common.cs" />
     <Compile Include="CTHD_BLLDAL.cs" />
+    <Compile Include="GiamGia_BLLDAL.cs" />
     <Compile Include="HoaDonBLLDAL.cs" />
     <Compile Include="KhachHang_BLLDAL.cs" />
     <Compile Include="LoaiSanPham_BLLDAL.cs" />

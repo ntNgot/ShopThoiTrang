@@ -81,8 +81,10 @@ namespace GUI
                     return;
                 }
                 Properties.Settings.Default.Save();
-                Program.formTN = new FormTN();
-                Program.formTN.Show();
+                //Program.formTN = new FormTN();
+                //Program.formTN.Show();
+                Menu_Ribbon frm = new Menu_Ribbon();
+                frm.Show();
                 this.Hide();
             }
             else
