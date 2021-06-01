@@ -462,7 +462,12 @@ namespace GUI
 
         private void FormTN_FormClosed(object sender, FormClosedEventArgs e)
         {
-            
+            if (Program.frmLogin == null)
+            {
+                Program.frmLogin = new FormLogin();
+                 Program.frmLogin.Show();
+            }
+            Program.frmLogin.Show();
         }
 
         private void accordionControlElementLogOut_Click(object sender, EventArgs e)
@@ -471,6 +476,11 @@ namespace GUI
             if (r == DialogResult.Yes)
             {
                 this.Hide();
+                if (Program.frmLogin == null)
+                {
+                    Program.frmLogin = new FormLogin();
+                    Program.frmLogin.Show();
+                }
                 Program.frmLogin.Show();
             }
 

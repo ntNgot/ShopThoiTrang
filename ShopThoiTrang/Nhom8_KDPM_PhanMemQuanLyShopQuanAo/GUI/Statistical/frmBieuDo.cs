@@ -165,5 +165,10 @@ namespace GUI
         {
             BD_HangHoabanduoc(dateBD.Text.ToString(), dateKT.Text.ToString(), "hàng hoá bán");
         }
+
+        private void frmBieuDo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

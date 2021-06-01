@@ -13,12 +13,12 @@ namespace GUI
     static class Program
     {
         
-        public static FormLogin frmLogin = null;
-        public static string linkURL_Image = @"C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\";
-        public static string linkURL_SanPham = @"C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\sanpham\";
-        public static string linkURL_LoaiSP = @"C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\loaisanpham\";
-        public static string linkURL_KhachHang = @"C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\KhachHang\";
-        public static string linkURL_NhanVien = @"C:\Users\Admin\Desktop\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\nhanvien\"; 
+        public static FormLogin frmLogin;
+        public static string linkURL_Image = @"C:\Users\Admin\Desktop\Phong\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\";
+        public static string linkURL_SanPham = @"C:\Users\Admin\Desktop\Phong\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\sanpham\";
+        public static string linkURL_LoaiSP = @"C:\Users\Admin\Desktop\Phong\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\loaisanpham\";
+        public static string linkURL_KhachHang = @"C:\Users\Admin\Desktop\Phong\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\KhachHang\";
+        public static string linkURL_NhanVien = @"C:\Users\Admin\Desktop\Phong\ShopThoiTrang\Nhom8_KDPM_PhanMemQuanLyShopQuanAo\Image\nhanvien\"; 
         public static FormTN formTN =null;
         public static List<CHITIETHOADON> dsBaoHanh = new List<CHITIETHOADON>();
         public static Cart dsPhieuNhap = new Cart();
@@ -32,7 +32,7 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormQLSP());
+            Application.Run(new FormLogin ());
 
         }
     }

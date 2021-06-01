@@ -10,7 +10,7 @@ namespace BLL_DAL
 {
     public class ThongKe
     {
-        public string ChuoiKN = @"Data Source=DESKTOP-P3L3PMG\THAOSQL;Initial Catalog=QLSHOPTHOITRANG;Persist Security Info=True;User ID=sa;Password=sa";
+        public string ChuoiKN = @"Data Source=.\sqlexpress;Initial Catalog=QLSHOPTHOITRANG;Integrated Security=True";
         public DataTable LayDuLieu(string lenhSql)
         {
             DataTable kq = new DataTable();

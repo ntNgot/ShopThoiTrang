@@ -73,18 +73,19 @@ namespace GUI
                     GUI.Properties.Settings.Default.Password = null;
                 }
                 TAIKHOANNHANVIEN tk = taikhoanBLL.FindTaiKhoan(txtName.Text, txtPass.Text);
-                NHANVIEN nv = taikhoanBLL.timNVTheoTK(int.Parse(tk.MANHANVIEN.ToString()));
+                NHANVIEN nv = taikhoanBLL.timNVTheoTK(int.Parse(tk.MANHANVIEN.ToString())); 
                 taiKhoan = tk;
-                if (nv.CHUCVU == "QuanLy")
+                if (nv.CHUCVU == "QuanLy"||nv.CHUCVU=="NhanVien")
                 {
-
+                    Menu_Ribbon frm = new Menu_Ribbon();
+                    frm.Show();
+                    Properties.Settings.Default.Save();
                     return;
                 }
                 Properties.Settings.Default.Save();
-                //Program.formTN = new FormTN();
-                //Program.formTN.Show();
-                Menu_Ribbon frm = new Menu_Ribbon();
-                frm.Show();
+                Program.formTN = new FormTN();
+                Program.formTN.Show();
+
                 this.Hide();
             }
             else

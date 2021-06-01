@@ -27,7 +27,8 @@ namespace GUI
             cbbNam.Properties.Items.AddRange(list);
 
         }
-        private void Load() {
+        private void Load()
+        {
             if (cbbThang.Text != "Tháng" && cbbNam.Text != "Năm")
             {
                 try
@@ -40,7 +41,7 @@ namespace GUI
 
 
                         Statistical_SP(gcThongKe, gvThongKe);
-                        lbTong.Text = "Tổng số lượng sản phẩm bán được: ";
+                        lbTong.Text = "Tổng số sản phẩm bán được: ";
                         load_tongTheoHangHoa();
 
                     }
@@ -60,7 +61,7 @@ namespace GUI
             {
                 XtraMessageBox.Show("Bạn chưa chọn đủ ngày tháng", "Thông báo");
             }
-           
+
         }
         public void Statistical_SP(GridControl gc, GridView gv)
         {
@@ -180,6 +181,11 @@ namespace GUI
                 report.Parameters["TotalPrice"].Value = label1.Text;
                 tool.ShowPreview();
             }
+        }
+
+        private void frStatistical_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
